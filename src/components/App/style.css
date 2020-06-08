@@ -1,0 +1,261 @@
+.tests {
+  height: 100%;
+  width: 70%;
+  position: relative;
+  background-color: lightblue;
+  opacity: 0.95;
+}
+.title {
+  height: 80px;
+  background-color: azure;
+  padding: 20px;
+  color: black;
+  text-align: center;
+}
+.question {
+  width: 90%;
+  height: 50px;
+  border-bottom: 2px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  margin: 0 auto;
+}
+.answers {
+  width: 80%;
+  height: 50px;
+  margin: 0 auto;
+  background-color: antiquewhite;
+}
+.answersList {
+  margin: 20px;
+  list-style-type: none;
+  user-select: none;
+  font-size: 18px;
+}
+.answersList li {
+  margin: 20px 0 0 80px;
+  position: relative;
+  cursor: pointer;
+}
+.answerLabel {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -40px;
+  top: -4px;
+  width: 25px;
+  height: 25px;
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 50%;
+}
+.active-item {
+  color: #16be00;
+}
+.buttons-block {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  user-select: none;
+}
+.buttons-block .btn-1 {
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: darkgray;
+  color: white;
+  cursor: pointer;
+  margin: 0 30px 20px;
+  outline: none;
+  border: none;
+}
+.buttons-block .btn-1:active {
+  outline: none;
+}
+.buttons-block .btn-1:focus {
+  outline: none;
+}
+.btn-1 {
+  padding: 10px 40px;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.btn-1:hover {
+  color: white;
+  box-shadow: none;
+  transition: all 300ms ease;
+}
+.btn-1:before {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  top: 0;
+  left: 50%;
+  transition: all 0ms ease;
+}
+.btn-1:hover:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  top: 0;
+  left: 0;
+  transition: all 300ms ease;
+}
+.navigation {
+  height: 100%;
+  width: 30%;
+  background-color: royalblue;
+}
+.Timer {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 24px 0;
+  border-bottom: 2px solid white;
+  width: 80%;
+  margin: 0 auto;
+}
+.time-wrapper {
+  font-size: 20px;
+  color: white;
+}
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 20px;
+  list-style-type: none;
+  height: 202px;
+}
+.nav-list li {
+  display: flex;
+  justify-content: center;
+}
+.nav-list span {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 5px;
+  text-align: center;
+}
+.nav-list-active {
+  color: black;
+  background-color: white;
+}
+.nav-list-inactive {
+  color: white;
+  border: 1px solid white;
+}
+.nav-list .question-status {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-top: 18px;
+}
+.progress-block {
+  width: 80%;
+  margin: 0 auto 20px auto;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  color: white;
+}
+.progress-status {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.progress {
+  height: 12px;
+  outline: 2px solid white;
+  margin: 0 auto;
+}
+.current {
+  height: 12px;
+  background-color: lawngreen;
+  transition: 1s;
+}
+.result-modal {
+  position: absolute;
+  left: 50%;
+  top: 50% ;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background-color: white;
+  z-index: 1;
+  opacity: 0.93;
+  text-align: center;
+  font-size: 17px;
+  padding: 20px;
+}
+.result-modal p {
+  margin: 15px 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(#003973, #E5E5BE);
+  display: flex;
+  align-items: center;
+}
+.container {
+  width: 1300px;
+  height: 80%;
+  border-radius: 5px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
+}
+.App {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+@media (max-width: 850px) {
+  body {
+    height: auto;
+  }
+  .App {
+    flex-direction: column;
+  }
+  .tests {
+    height: 450px;
+    width: 100%;
+  }
+  .navigation {
+    width: 100%;
+  }
+  .btn-1 {
+    padding: 5px 20px;
+  }
+  .answersList li {
+    margin-left: 30px;
+  }
+  .nav-list {
+    height: auto;
+    flex-direction: initial;
+  }
+  .buttons-block .btn-1 {
+    margin: 0 20px 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
