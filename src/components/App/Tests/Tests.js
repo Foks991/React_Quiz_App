@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
 
-import Title from "./ActiveQuiz/Title/Title";
 import ActiveQuiz from "./ActiveQuiz/ActiveQuiz";
 import Buttons from "./ActiveQuiz/Buttons/Buttons";
-
 import Navigation from "./Navigation/Navigation";
 import Result from "./Result/Result";
 
-import {quizz} from "./data";
+//import {quizz} from "./data";
+import {connect} from "react-redux";
 
-export default (/*{ quizz }*/) => {
+const Tests = (/*{ quizz }*/{tests}) => {
     /*const { data, id } = quizz;*/
-    const quizId = 'reactQuiz';
 
     const [testIsDone, setTestIsDone] = useState(false);
     const [activeQuestion, setActiveQuestion] = useState(0);
     const [answerLabels, setAnswerLabels] = useState(['A', 'B', 'C', 'D']);
-    const [quizTitle, setQuizTitle] = useState('React Quiz');
-    const [quiz, setQuiz] = useState([...quizz[quizId]]);
+    /*const [quizTitle, setQuizTitle] = useState('React Quiz');*/
+
+    const [quiz, setQuiz] = useState([...tests]);
     const [answers, setAnswers] = useState(quiz.map(item => item.selectedAnswer));
 
 
@@ -55,7 +54,7 @@ export default (/*{ quizz }*/) => {
         setQuiz(newQuiz);
     };
 
-    const testBtn = () => {
+    const fastFinishTest = () => {
         const arr = quiz.map(item => {
             item.selectedAnswer = 1;
         });
@@ -64,6 +63,7 @@ export default (/*{ quizz }*/) => {
 
     return(
         <>
+
             <div className={'tests'}>
 
              {quiz.map(item => {
@@ -76,7 +76,7 @@ export default (/*{ quizz }*/) => {
                             quiz={ quiz }
                             answers={ answers }
                             question={ question }
-                            quizTitle={ quizTitle }
+                            /*quizTitle={ quizTitle }*/
                             answerLabels={ answerLabels }
                             selectedAnswer={ selectedAnswer }
                             activeQuestion={ activeQuestion }
@@ -85,7 +85,7 @@ export default (/*{ quizz }*/) => {
                 })}
 
                  <Buttons
-                     testBtn={testBtn}
+                     fastFinishTest={fastFinishTest}
                      finishTest={ finishTest }
                      nextQuestion={ nextQuestion }
                      prevQuestion={ prevQuestion }
@@ -106,5 +106,21 @@ export default (/*{ quizz }*/) => {
             </div>
         </>
     )
+};
 
-}
+const mapStateToProps = (state) => {
+    console.log(state.quiz.reactQuiz.tests);
+    return {
+        tests: state.quiz.reactQuiz.tests
+    }
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onAdd: () => dispatch({type: 'Add'}),
+        onSub: () => dispatch({type: 'Sub'}),
+    }
+};
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Tests);

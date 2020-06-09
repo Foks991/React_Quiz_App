@@ -2,9 +2,9 @@ import React from 'react';
 import AnswerList from './AnswersList/AnswersList'
 import Title from "./Title/Title";
 
-export default ({ question, activeQuestion, quiz, quizTitle, ...rest }) => (
+export default ({ question, activeQuestion, quiz, ...rest }) => (
     <>
-        <Title quizTitle={ quizTitle }/>
+        <Title/>
 
         <div className={'question'}>
             <div>{activeQuestion + 1}. {question}</div>

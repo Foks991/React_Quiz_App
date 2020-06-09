@@ -1,5 +1,7 @@
-/*
-export const quizz = { reactQuiz: {tests: [
+const initialState = {
+    reactQuiz: {
+        quizTitle: "React Quiz",
+        tests: [
             {
                 // getstr: 'http:/backand/api/getQuiz?quizeId=qweeqw',
                 correctAnswers: [1],
@@ -236,4 +238,23 @@ export const quizz = { reactQuiz: {tests: [
                 ],
                 selectedAnswer: null,
                 id: 19,
-            }],} };*/
+            }],
+    }
+};
+
+
+export const quizes = (state = initialState, action) => {
+
+    switch (action.type) {
+        case 'Add':
+            return {
+                test: state.test + 40
+            };
+        case 'Sub':
+            return {
+                test: state.test - 40
+            };
+        default:
+            return state
+    }
+}
