@@ -8,7 +8,7 @@ import Result from "./Result/Result";
 //import {quizz} from "./data";
 import {connect} from "react-redux";
 
-const Tests = (/*{ quizz }*/{tests}) => {
+const Quiz = (/*{ quizz }*/{tests}) => {
     /*const { data, id } = quizz;*/
 
     const [testIsDone, setTestIsDone] = useState(false);
@@ -62,7 +62,7 @@ const Tests = (/*{ quizz }*/{tests}) => {
     };
 
     return(
-        <>
+        <div className={'Quiz'}>
 
             <div className={'tests'}>
 
@@ -104,7 +104,7 @@ const Tests = (/*{ quizz }*/{tests}) => {
                     chooseQuestion={ chooseQuestion }
                 />
             </div>
-        </>
+        </div>
     )
 };
 
@@ -123,4 +123,4 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Tests);
+export default connect(mapStateToProps, mapDispatchToProps)(Quiz);

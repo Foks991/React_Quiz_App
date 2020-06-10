@@ -260,6 +260,23 @@ const initialState = {
             },
         ],
     },
+    cssQuiz: {
+        id: "css",
+        quizTitle: "Html Quiz",
+        tests: [
+            {
+                correctAnswers: [1],
+                question: 'What does HTML stand for?',
+                answers: [
+                    {text: 'Hyper Text Markup Language', id: 1},
+                    {text: 'Home Tool Markup Language', id: 2},
+                    {text: 'Hyperlinks and Text Markup Language', id: 3},
+                ],
+                selectedAnswer: null,
+                id: 0,
+            },
+        ],
+    },
 };
 
 

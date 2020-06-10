@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from "react-redux";
-import { getReactQuiz } from "../../../../../store/reducers/rootReducer";
+import { getReactQuiz } from "../../../../store/reducers/rootReducer";
 
 const Title = ({ quizTitle }) =>
     <div className={'title'}>

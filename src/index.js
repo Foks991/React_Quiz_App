@@ -1,12 +1,12 @@
 import React from 'react';
 import {render} from 'react-dom';
-import './components/App/app.css';
-import App from './components/App/App';
+import './components/Quiz/quiz.css';
+import Quiz from './components/Quiz/Quiz';
 
 import rootReducer from "./store/reducers/rootReducer";
 import {createStore, applyMiddleware} from 'redux';
-import {BrowserRouter} from 'react-router-dom'
 import createSagaMiddleware from 'redux-saga'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 import rootSaga from './store/saga/rootSaga';
 import {Provider} from 'react-redux';
@@ -21,7 +21,10 @@ sagaMiddleware.run(rootSaga);
 const app = (
     <BrowserRouter>
         <Provider store={store}>
-            <App/>
+            <Switch>
+                {/*<Route path={'/'} component={App} exact/>*/}
+                <Route path={'/quiz'} component={Quiz} exact/>
+            </Switch>
         </Provider>
     </BrowserRouter>
 );
