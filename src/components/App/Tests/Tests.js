@@ -66,7 +66,7 @@ const Tests = (/*{ quizz }*/{tests}) => {
 
             <div className={'tests'}>
 
-             {quiz.map(item => {
+                {quiz.map(item => {
                     const {answers, selectedAnswer, question, id} = item;
 
                     return (
@@ -84,14 +84,14 @@ const Tests = (/*{ quizz }*/{tests}) => {
                         />)
                 })}
 
-                 <Buttons
-                     fastFinishTest={fastFinishTest}
-                     finishTest={ finishTest }
-                     nextQuestion={ nextQuestion }
-                     prevQuestion={ prevQuestion }
-                     checkAllAnswers={ checkAllAnswers }
+                <Buttons
+                    fastFinishTest={fastFinishTest}
+                    finishTest={ finishTest }
+                    nextQuestion={ nextQuestion }
+                    prevQuestion={ prevQuestion }
+                    checkAllAnswers={ checkAllAnswers }
                 />
-                 <Result
+                <Result
                     quiz={ quiz }
                     testIsDone={ testIsDone }
                 />

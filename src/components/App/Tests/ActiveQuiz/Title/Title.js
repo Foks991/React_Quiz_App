@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from "react-redux";
+import { getReactQuiz } from "../../../../../store/reducers/rootReducer";
 
 const Title = ({ quizTitle }) =>
     <div className={'title'}>
@@ -8,7 +9,7 @@ const Title = ({ quizTitle }) =>
 
 const mapStateToProps = (state) => {
     return {
-        quizTitle: state.quiz.reactQuiz.quizTitle
+        quizTitle: getReactQuiz(state).quizTitle
     }
 };
 

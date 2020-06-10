@@ -1,5 +1,8 @@
+import {quizActionTypes} from "../actions/quizActions";
+
 const initialState = {
     reactQuiz: {
+        id: "react",
         quizTitle: "React Quiz",
         tests: [
             {
@@ -239,22 +242,38 @@ const initialState = {
                 selectedAnswer: null,
                 id: 19,
             }],
-    }
+    },
+    htmlQuiz: {
+        id: "html",
+        quizTitle: "Html Quiz",
+        tests: [
+            {
+                correctAnswers: [1],
+                question: 'What does HTML stand for?',
+                answers: [
+                    {text: 'Hyper Text Markup Language', id: 1},
+                    {text: 'Home Tool Markup Language', id: 2},
+                    {text: 'Hyperlinks and Text Markup Language', id: 3},
+                ],
+                selectedAnswer: null,
+                id: 0,
+            },
+        ],
+    },
 };
 
 
 export const quizes = (state = initialState, action) => {
-
     switch (action.type) {
-        case 'Add':
+        case quizActionTypes.FETCH_TESTS_SUCCESS:
             return {
-                test: state.test + 40
-            };
-        case 'Sub':
-            return {
-                test: state.test - 40
+                ...state,
+                newArr: action.payload
             };
         default:
             return state
     }
-}
+};
+
+export const getReactQuiz = state => state.reactQuiz;
+export const getHtmlQuiz = state => state.htmlQuiz;

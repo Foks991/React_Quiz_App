@@ -22,7 +22,10 @@ module.exports = {
                 }
             },
             {test: /\.html$/, use: "html-loader"},
-            {test: /\.less$/, use: [CssWebpackPlugin.loader, "css-loader", "less-loader"]},
+            {
+                test: /\.less$/,
+                use: [CssWebpackPlugin.loader, "css-loader", "less-loader"]
+            },
             {test: /\.(jpe?g|png|gif|svg)$/i,
                 use: [{
                     loader: "file-loader",
@@ -37,7 +40,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "./src/index.html"),
+            template: path.resolve(__dirname, "./public/index.html"),
             filename: "index.html"
         }),
         new CssWebpackPlugin({
