@@ -1,3 +1,4 @@
+/*
 import {takeLatest, call} from "redux-saga/effects";
 import {usersApi} from "../../api/requests";
 import {quizActionTypes as type, quizActions} from "../actions/quizActions";
@@ -16,4 +17,4 @@ const quizSagas = [
     takeLatest(type.FETCH_TESTS_REQUEST, fetchTestSaga)
 ];
 
-export default quizSagas
+export default quizSagas*/

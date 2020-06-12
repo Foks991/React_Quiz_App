@@ -5,21 +5,14 @@ import Buttons from "./ActiveQuiz/Buttons/Buttons";
 import Navigation from "./Navigation/Navigation";
 import Result from "./Result/Result";
 
-//import {quizz} from "./data";
 import {connect} from "react-redux";
 
-const Quiz = (/*{ quizz }*/{tests}) => {
-    /*const { data, id } = quizz;*/
-
+const Quiz = ({tests}) => {
     const [testIsDone, setTestIsDone] = useState(false);
     const [activeQuestion, setActiveQuestion] = useState(0);
     const [answerLabels, setAnswerLabels] = useState(['A', 'B', 'C', 'D']);
-    /*const [quizTitle, setQuizTitle] = useState('React Quiz');*/
-
     const [quiz, setQuiz] = useState([...tests]);
     const [answers, setAnswers] = useState(quiz.map(item => item.selectedAnswer));
-
-
 
     const prevQuestion = () => {
         if (!(activeQuestion === 0)) {
@@ -63,7 +56,6 @@ const Quiz = (/*{ quizz }*/{tests}) => {
 
     return(
         <div className={'Quiz'}>
-
             <div className={'tests'}>
 
                 {quiz.map(item => {
@@ -76,7 +68,6 @@ const Quiz = (/*{ quizz }*/{tests}) => {
                             quiz={ quiz }
                             answers={ answers }
                             question={ question }
-                            /*quizTitle={ quizTitle }*/
                             answerLabels={ answerLabels }
                             selectedAnswer={ selectedAnswer }
                             activeQuestion={ activeQuestion }
@@ -85,10 +76,10 @@ const Quiz = (/*{ quizz }*/{tests}) => {
                 })}
 
                 <Buttons
-                    fastFinishTest={fastFinishTest}
                     finishTest={ finishTest }
                     nextQuestion={ nextQuestion }
                     prevQuestion={ prevQuestion }
+                    fastFinishTest={fastFinishTest}
                     checkAllAnswers={ checkAllAnswers }
                 />
                 <Result
@@ -115,12 +106,4 @@ const mapStateToProps = (state) => {
     }
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        onAdd: () => dispatch({type: 'Add'}),
-        onSub: () => dispatch({type: 'Sub'}),
-    }
-};
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(Quiz);
+export default connect(mapStateToProps, null)(Quiz);

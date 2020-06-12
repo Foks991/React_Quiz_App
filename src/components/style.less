@@ -1,17 +1,16 @@
-@import "tests";
+@import "Quiz/ActiveQuiz/ActiveQuiz";
+@import "Quiz/ActiveQuiz/Title/title";
+@import "Quiz/ActiveQuiz/Buttons/buttons";
+@import "Quiz/ActiveQuiz/AnswersList/answersList";
 
-@import "ActiveQuiz/ActiveQuiz";
-@import "ActiveQuiz/Title/title";
-@import "ActiveQuiz/Buttons/buttons";
-@import "ActiveQuiz/AnswersList/answersList";
+@import "Quiz/Navigation/navigation";
+@import "Quiz/Navigation/Timer/timer";
+@import "Quiz/Navigation/NavList/navlist";
+@import "Quiz/Navigation/Progress/progress";
 
-@import "../AllQuizes/allQuizes";
-@import "Navigation/navigation";
-@import "Navigation/Timer/timer";
-@import "Navigation/NavList/navlist";
-@import "Navigation/Progress/progress";
+@import "Quiz/Result/result";
 
-@import "Result/result";
+@import "AllQuizzes/allQuizes";
 
 *{
   margin: 0;
@@ -30,17 +29,28 @@ body{
 
 .container{
   width: 1300px;
-  height: 80%;
+  height: 100vh;
   border-radius: 5px;
   margin: 0 auto;
   box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
 }
 
 .Quiz{
   width: 100%;
-  height: 100%;
+  height: 90%;
   display: flex;
 }
+
+.tests {
+  height: 100%;
+  width: 70%;
+  position: relative;
+  background-color: lightblue;
+  opacity: 0.95;
+}
+
 
 @media(max-width: 850px){
   body{

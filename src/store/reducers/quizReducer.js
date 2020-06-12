@@ -1,8 +1,9 @@
+
 import {quizActionTypes} from "../actions/quizActions";
 
 const initialState = {
     reactQuiz: {
-        id: "react",
+        id: "React",
         quizTitle: "React Quiz",
         tests: [
             {
@@ -244,7 +245,7 @@ const initialState = {
             }],
     },
     htmlQuiz: {
-        id: "html",
+        id: "Html",
         quizTitle: "Html Quiz",
         tests: [
             {
@@ -261,7 +262,7 @@ const initialState = {
         ],
     },
     cssQuiz: {
-        id: "css",
+        id: "Css",
         quizTitle: "Html Quiz",
         tests: [
             {
@@ -279,13 +280,11 @@ const initialState = {
     },
 };
 
-
-export const quizes = (state = initialState, action) => {
+export const quiz = (state = initialState, action) => {
     switch (action.type) {
-        case quizActionTypes.FETCH_TESTS_SUCCESS:
+        case quizActionTypes.ADD:
             return {
-                ...state,
-                newArr: action.payload
+
             };
         default:
             return state
@@ -294,3 +293,5 @@ export const quizes = (state = initialState, action) => {
 
 export const getReactQuiz = state => state.reactQuiz;
 export const getHtmlQuiz = state => state.htmlQuiz;
+export const getCssQuiz = state => state.cssQuiz;
+
