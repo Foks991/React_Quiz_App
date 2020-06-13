@@ -6,7 +6,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "start1": "node app.js"
+    "eject": "react-scripts eject"
   },
   "author": "",
   "license": "ISC",
