@@ -278,13 +278,15 @@ const initialState = {
             },
         ],
     },
+    fromServer : null,
 };
 
 export const quiz = (state = initialState, action) => {
     switch (action.type) {
-        case quizActionTypes.ADD:
+        case quizActionTypes.FETCH_TESTS_REQUEST:
             return {
-
+                ...state,
+                fromServer : action.payload
             };
         default:
             return state

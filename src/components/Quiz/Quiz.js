@@ -8,6 +8,7 @@ import Result from "./Result/Result";
 import {connect} from "react-redux";
 
 const Quiz = ({tests}) => {
+
     const [testIsDone, setTestIsDone] = useState(false);
     const [activeQuestion, setActiveQuestion] = useState(0);
     const [answerLabels, setAnswerLabels] = useState(['A', 'B', 'C', 'D']);

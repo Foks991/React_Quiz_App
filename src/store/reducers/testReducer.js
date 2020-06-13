@@ -7,9 +7,8 @@ export const testReducer = (state = initialState, action) => {
         case 'BLA':
             return {
                 testIni: state.testIni + 111
-            }
-        default: return {
-            state
-        }
+            };
+        default:
+            return state
     }
 };

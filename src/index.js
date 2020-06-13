@@ -7,16 +7,17 @@ import AllQuizzes from './components/AllQuizzes/AllQuizzes';
 
 import rootReducer from "./store/reducers/rootReducer";
 import {createStore, applyMiddleware} from 'redux';
-//import createSagaMiddleware from 'redux-saga';
+import createSagaMiddleware from 'redux-saga';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import rootSaga from './store/saga/rootSaga';
 import {Provider} from 'react-redux';
+import thunk from 'redux-thunk'
 
 const root = document.getElementById('root');
 
-//const sagaMiddleware = createSagaMiddleware();
-const store = createStore(rootReducer/*, applyMiddleware(sagaMiddleware)*/);
+const sagaMiddleware = createSagaMiddleware();
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 //sagaMiddleware.run(rootSaga);
 
