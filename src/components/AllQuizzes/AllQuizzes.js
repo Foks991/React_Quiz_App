@@ -16,7 +16,7 @@ const AllQuizzes = ({state, quiz, test, fromServer, onfetch}) => {
         console.log(response);
         /*setName(response.profileObj.name);
         setEmail(response.profileObj.email); */
-    }
+    };
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");

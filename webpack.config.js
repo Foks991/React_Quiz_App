@@ -1,4 +1,3 @@
-/*
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CssWebpackPlugin = require('mini-css-extract-plugin');
@@ -49,4 +48,4 @@ module.exports = {
         })
     ],
     watch: true,
-};*/
+};
