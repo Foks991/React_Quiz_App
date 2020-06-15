@@ -278,7 +278,7 @@ const initialState = {
             },
         ],
     },
-    fromServer : null,
+    /*fromServer : null,*/
 };
 
 export const quiz = (state = initialState, action) => {
