@@ -7,7 +7,6 @@ const initialState = {
         quizTitle: "React Quiz",
         tests: [
             {
-                // getstr: 'http:/backand/api/getQuiz?quizeId=qweeqw',
                 correctAnswers: [1],
                 question: 'Who Develop React.js?',
                 answers: [
@@ -278,7 +277,7 @@ const initialState = {
             },
         ],
     },
-    /*fromServer : null,*/
+    fromServer : null,
 };
 
 export const quiz = (state = initialState, action) => {

@@ -5,19 +5,11 @@ import {fetchTests} from '../../store/actions/actions'
 import GoogleLogin from 'react-google-login';
 
 
-const AllQuizzes = ({state, quiz, test, fromServer, onfetch}) => {
-    {
-        console.log(state)
-    }
-    {
-        console.log(quiz)
-    }
-    {
-        console.log(test)
-    }
-    {
-        console.log(fromServer)
-    }
+const AllQuizzes = ({state, quiz, test, fromServer, onfetch, onBla}) => {
+    {console.log(state)}
+    {console.log(quiz)}
+    {console.log(test)}
+    {console.log(fromServer)}
 
     const responseGoogle = (response) => {
         console.log(response);
@@ -47,7 +39,7 @@ const AllQuizzes = ({state, quiz, test, fromServer, onfetch}) => {
                     cookiePolicy={'single_host_origin'}
                 />
             </div>
-            {Object.keys(quiz).map(item =>
+            {/*{Object.keys(quiz).map(item =>
                 <div
                     className={'quizz'}
                     key={quiz[item].id}
@@ -57,7 +49,7 @@ const AllQuizzes = ({state, quiz, test, fromServer, onfetch}) => {
                     }}
                 >{quiz[item].id}
                 </div>
-            )}
+            )}*/}
         </div>
     )
 };
@@ -74,6 +66,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onfetch: () => dispatch(fetchTests()),
+        onBla: () => dispatch({type:'BLA'}),
     }
 };
 
