@@ -277,7 +277,6 @@ const initialState = {
             },
         ],
     },
-    fromServer : null,
 };
 
 export const quiz = (state = initialState, action) => {

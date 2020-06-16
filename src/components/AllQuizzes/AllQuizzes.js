@@ -29,7 +29,7 @@ const AllQuizzes = ({state, quiz, test, fromServer, onfetch, onBla}) => {
                 >Fetch
                 </button>
                 <GoogleLogin
-                    clientId="996107266209-c29o81pvdbllpth51au16hitku6cts3p.apps.googleusercontent.com"
+                    clientId="996107266209-et7i2pjho76nk7c9u18aiqmq85io1cq5.apps.googleusercontent.com"
                     /*render={renderProps => (
                         <button onClick={renderProps.onClick} disabled={renderProps.disabled}>This is my custom Google button</button>
                     )}*/
@@ -39,7 +39,7 @@ const AllQuizzes = ({state, quiz, test, fromServer, onfetch, onBla}) => {
                     cookiePolicy={'single_host_origin'}
                 />
             </div>
-            {/*{Object.keys(quiz).map(item =>
+            {Object.keys(quiz).map(item =>
                 <div
                     className={'quizz'}
                     key={quiz[item].id}
@@ -49,7 +49,7 @@ const AllQuizzes = ({state, quiz, test, fromServer, onfetch, onBla}) => {
                     }}
                 >{quiz[item].id}
                 </div>
-            )}*/}
+            )}
         </div>
     )
 };
