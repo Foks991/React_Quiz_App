@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 
-import ActiveQuiz from "./ActiveQuiz/ActiveQuiz";
-import Buttons from "./ActiveQuiz/Buttons/Buttons";
-import Navigation from "./Navigation/Navigation";
 import Result from "./Result/Result";
+import Buttons from "./ActiveQuiz/Buttons/Buttons";
+import ActiveQuiz from "./ActiveQuiz/ActiveQuiz";
+import Navigation from "./Navigation/Navigation";
 
 import {connect} from "react-redux";
 
 const Quiz = ({tests}) => {
 
-    const [testIsDone, setTestIsDone] = useState(false);
-    const [activeQuestion, setActiveQuestion] = useState(0);
-    const [answerLabels, setAnswerLabels] = useState(['A', 'B', 'C', 'D']);
     const [quiz, setQuiz] = useState([...tests]);
+
+    const [testIsDone, setTestIsDone] = useState(false);
+    const [answerLabels, setAnswerLabels] = useState(['A', 'B', 'C', 'D']);
+    const [activeQuestion, setActiveQuestion] = useState(0);
     const [answers, setAnswers] = useState(quiz.map(item => item.selectedAnswer));
 
     const prevQuestion = () => {
@@ -100,10 +101,12 @@ const Quiz = ({tests}) => {
     )
 };
 
+
+
 const mapStateToProps = (state) => {
-    console.log(state.quiz.reactQuiz.tests);
+    const quizType = sessionStorage.getItem('quizType');
     return {
-        tests: state.quiz.reactQuiz.tests
+        tests: state.quiz[`${quizType}`].tests
     }
 };
 

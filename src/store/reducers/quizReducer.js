@@ -1,9 +1,42 @@
-
 import {quizActionTypes} from "../actions/quizActions";
 
 const initialState = {
+    /*htmlQuiz: {
+        id: "htmlQuiz",
+        quizTitle: "Html Quiz",
+        tests: [
+            {
+                correctAnswers: [1],
+                question: 'What does HTML stand for?',
+                answers: [
+                    {text: 'Hyper Text Markup Language', id: 1},
+                    {text: 'Home Tool Markup Language', id: 2},
+                    {text: 'Hyperlinks and Text Markup Language', id: 3},
+                ],
+                selectedAnswer: null,
+                id: 0,
+            },
+        ],
+    },
+    cssQuiz: {
+        id: "cssQuiz",
+        quizTitle: "Css Quiz",
+        tests: [
+            {
+                correctAnswers: [1],
+                question: 'What does HTML stand for?',
+                answers: [
+                    {text: 'Hyper Text Markup Language', id: 1},
+                    {text: 'Home Tool Markup Language', id: 2},
+                    {text: 'Hyperlinks and Text Markup Language', id: 3},
+                ],
+                selectedAnswer: null,
+                id: 0,
+            },
+        ],
+    },
     reactQuiz: {
-        id: "React",
+        id: "reactQuiz",
         quizTitle: "React Quiz",
         tests: [
             {
@@ -242,50 +275,13 @@ const initialState = {
                 selectedAnswer: null,
                 id: 19,
             }],
-    },
-    htmlQuiz: {
-        id: "Html",
-        quizTitle: "Html Quiz",
-        tests: [
-            {
-                correctAnswers: [1],
-                question: 'What does HTML stand for?',
-                answers: [
-                    {text: 'Hyper Text Markup Language', id: 1},
-                    {text: 'Home Tool Markup Language', id: 2},
-                    {text: 'Hyperlinks and Text Markup Language', id: 3},
-                ],
-                selectedAnswer: null,
-                id: 0,
-            },
-        ],
-    },
-    cssQuiz: {
-        id: "Css",
-        quizTitle: "Html Quiz",
-        tests: [
-            {
-                correctAnswers: [1],
-                question: 'What does HTML stand for?',
-                answers: [
-                    {text: 'Hyper Text Markup Language', id: 1},
-                    {text: 'Home Tool Markup Language', id: 2},
-                    {text: 'Hyperlinks and Text Markup Language', id: 3},
-                ],
-                selectedAnswer: null,
-                id: 0,
-            },
-        ],
-    },
+    },*/
 };
 
 export const quiz = (state = initialState, action) => {
     switch (action.type) {
         case quizActionTypes.FETCH_TESTS_REQUEST:
-            return {
-                ...state,
-                fromServer : action.payload
-            };
+            return action.payload;
         default:
             return state
     }

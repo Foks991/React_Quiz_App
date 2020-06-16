@@ -1,12 +1,12 @@
 import {quiz} from "./quizReducer";
-import {testReducer} from "./testReducer";
+import {userReducer} from "./userReducer";
 import {combineReducers} from 'redux'
 
 import * as fromQuiz from './quizReducer';
 
 export default combineReducers({
     quiz,
-    testReducer,
+    userReducer,
 })
 
 export const getReactQuiz = state => fromQuiz.getReactQuiz(state.quiz);
