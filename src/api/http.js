@@ -1,9 +1,12 @@
 class Http {
-    defaults = {
-        headers: {},
-        interceptors: {}, // 404: (response) => {}
-        options: {},
-    };
+    constructor(props) {
+        this.defaults = {
+            headers: {},
+            interceptors: {}, // 404: (response) => {}
+            options: {},
+        };
+    }
+
 
     get(url, options) {
         return this.request(url, 'GET', undefined, options);

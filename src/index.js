@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import './components/style.css';
+import './components/style.less';
 
 import Quiz from './components/Quiz/Quiz';
 import AllQuizzes from './components/AllQuizzes/AllQuizzes';
@@ -12,14 +12,14 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import rootSaga from './store/saga/rootSaga';
 import {Provider} from 'react-redux';
-import thunk from 'redux-thunk'
+//import thunk from 'redux-thunk'
 
 const root = document.getElementById('root');
 
 const sagaMiddleware = createSagaMiddleware();
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 
-//sagaMiddleware.run(rootSaga);
+sagaMiddleware.run(rootSaga);
 
 const App = (
     <BrowserRouter>

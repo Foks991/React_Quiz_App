@@ -1,7 +1,7 @@
 import {quizActionTypes} from "../actions/quizActions";
 
 const initialState = {
-    /*htmlQuiz: {
+    htmlQuiz: {
         id: "htmlQuiz",
         quizTitle: "Html Quiz",
         tests: [
@@ -275,13 +275,18 @@ const initialState = {
                 selectedAnswer: null,
                 id: 19,
             }],
-    },*/
+    },
+    users: [],
 };
 
 export const quiz = (state = initialState, action) => {
     switch (action.type) {
-        case quizActionTypes.FETCH_TESTS_REQUEST:
-            return action.payload;
+        case quizActionTypes.FETCH_TESTS_SUCCESS : {
+            return {
+                ...state,
+                users: [ ...action.payload ]
+            }
+        }
         default:
             return state
     }
@@ -290,4 +295,5 @@ export const quiz = (state = initialState, action) => {
 export const getReactQuiz = state => state.reactQuiz;
 export const getHtmlQuiz = state => state.htmlQuiz;
 export const getCssQuiz = state => state.cssQuiz;
+export const getUsers = state => state.users;
 

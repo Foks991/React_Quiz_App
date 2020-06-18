@@ -22,8 +22,7 @@ const setQuizTypeToStorage = (quizType) =>{
 export default connect(mapStateToProps, mapDispatchToProps)(({quiz, quizType}) => {
     console.log("quiztype", quizType);
     return (
-        <div>asd</div>
-      /*  Object.keys(quiz).map(item =>
+        Object.keys(quiz).map(item =>
             <div
                 className={'quizz'}
                 key={quiz[item].id}
@@ -32,10 +31,11 @@ export default connect(mapStateToProps, mapDispatchToProps)(({quiz, quizType}) =
                     let el = e.target;
                     console.log(el.id);
                     setQuizTypeToStorage(el.id);
-                    window.location ='http://localhost:3000/quiz'
+                    //window.location ='http://localhost:3000/quiz'
+                    window.location ='http://testtesst.hostenko.net/quiz'
                 }}
             >{quiz[item].id}
             </div>
-        )*/)
+        ))
 });
 

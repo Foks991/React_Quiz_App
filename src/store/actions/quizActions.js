@@ -3,11 +3,11 @@ export const quizActionTypes = {
     FETCH_TESTS_SUCCESS:  'FETCH_TESTS_SUCCESS',
 };
 
-/*export const quizActions = {
-    fetchTestsRequest: ({payload}) => {
-        return ({ type: quizActionTypes.FETCH_TESTS_REQUEST, payload })
+export const quizActions = {
+    fetchTestsRequest: () => {
+        return ({ type: quizActionTypes.FETCH_TESTS_REQUEST })
     },
-    fetchTestsSuccess: ({ payload }) => ({
-        type: quizActionTypes.FETCH_TESTS_SUCCESS, payload,
+    fetchTestsSuccess: ({ users }) => ({
+        type: quizActionTypes.FETCH_TESTS_SUCCESS, payload: users,
     }),
-};*/
+};
