@@ -15,11 +15,12 @@ module.exports = {
         filename: 'index.js',
     },
     devServer: {
-        port: 3020,
+        port: 3000,
         contentBase: path.resolve(__dirname, './build'),
         hot: true,
         open: true,
         watchContentBase: true,
+        historyApiFallback: true,
         watchOptions: {
             ignored: /node_modules/,
         },
@@ -27,6 +28,7 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx', '.json'],
     },
+
     module: {
         rules: [
             {
@@ -36,7 +38,7 @@ module.exports = {
                     loader: 'babel-loader',
                 },
             },
-            { test: /\.html$/, use: 'html-loader' },
+            {test: /\.html$/, use: 'html-loader'},
             {
                 test: /\.less$/,
                 use: [
@@ -72,6 +74,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './public/index.html'),
             filename: 'index.html',
+            favicon: "./src/images/exam.png"
         }),
         new CssWebpackPlugin({
             filename: 'style.css',

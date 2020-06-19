@@ -1,3 +1,5 @@
+@import "Quiz/quiz";
+
 @import "Quiz/ActiveQuiz/ActiveQuiz";
 @import "Quiz/ActiveQuiz/Title/title";
 @import "Quiz/ActiveQuiz/Buttons/buttons";
@@ -12,7 +14,6 @@
 
 @import "AllQuizzes/allQuizes";
 @import "AllQuizzes/GoogleAuth/googleAuth";
-@import "AllQuizzes/GoogleAuthStatus/googleAuthStatus";
 
 *{
   margin: 0;
@@ -39,20 +40,11 @@ body{
   align-items: center;
 }
 
-.Quiz{
+.QuizContainer{
   width: 100%;
   height: 90%;
   display: flex;
 }
-
-.tests {
-  height: 100%;
-  width: 70%;
-  position: relative;
-  background-color: lightblue;
-  opacity: 0.95;
-}
-
 
 @media(max-width: 850px){
   body{

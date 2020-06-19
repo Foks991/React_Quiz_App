@@ -1,41 +1,40 @@
-import React, { useEffect, useState } from 'react'
+import React, {useEffect} from 'react'
 import Quizzes from "./Quizzes/Quizzes";
 import {connect} from "react-redux";
 import GoogleAuth from "./GoogleAuth/GoogleAuth";
 import {quizActions} from "../../store/actions/actions";
-import { getUsers, getIsAuth, getUser } from "../../store/reducers/rootReducer";
-import GoogleAuthStatus from "./GoogleAuthStatus/GoogleAuthStatus";
+import {getUsers, getIsAuth, getUser} from "../../store/reducers/rootReducer";
 
-const AllQuizzes = (({ user, isAuth, users, quiz, isLogin, onfetch, quizState }) => {
-    useEffect(() => {
+const AllQuizzes = (({user, isAuth, users, quiz, isLogin, onfetch, quizState}) => {
+    /*useEffect(() => {
         onfetch()
-    }, []);
-
+    }, []);*/
+    console.log(user);
     return (
-        <div className={'allQuizzes'}>
-            { isAuth ?
-                <>
-                    <div style={{display: 'flex', flexDirection: 'column'}}>
-                        <span>{`HELLO ${user.name}`}</span>
-                        <span>{`YOUR FAMILY ${user.surname}`}</span>
-                        <span>{`YOUR EMAIL ${user.email}`}</span>
-                    </div>
-                    <GoogleAuthStatus
-                        isLogin={isLogin}
-                    />
-                    <Quizzes/>
-                </>
-                :
-                <GoogleAuth/>
-            }
-        </div>
+        <>
+            {/*<button onClick={onfetch}>asd</button>*/}
+            <div className={'allQuizzes'}>
+                {isAuth ?
+                    <>
+                        <div style={{display: 'flex', flexDirection: 'column'}}>
+                            <span>{`HELLO ${user.name}`}</span>
+                            <span>{`YOUR FAMILY ${user.surname}`}</span>
+                            <span>{`YOUR EMAIL ${user.email}`}</span>
+                        </div>
+                        <Quizzes/>
+                    </>
+                    :
+                    <GoogleAuth/>
+                }
+            </div>
+        </>
     )
 });
 
 const mapStateToProps = (state) => {
     return {
         quiz: state,
-        isLogin: state.userReducer.user.isLogin,
+        isLogin: state.user.user.isLogin,
         quizState: state.quiz,
         users: getUsers(state),
         isAuth: getIsAuth(state),

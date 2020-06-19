@@ -4,7 +4,7 @@ import {quizActionTypes as type, quizActions} from "../actions/quizActions";
 
 function* fetchTestSaga() {
     try {
-        const response = yield call(usersApi.getUsers);
+        const response = yield call(usersApi.getTests);
         const users = yield response.json();
         yield put(quizActions.fetchTestsSuccess({ users }));
     } catch (e) {

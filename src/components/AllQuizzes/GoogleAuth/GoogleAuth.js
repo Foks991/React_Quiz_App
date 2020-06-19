@@ -5,33 +5,15 @@ import {useGoogleLogin} from 'react-google-login'
 import {useGoogleLogout} from 'react-google-login'
 
 import {connect} from "react-redux";
-import {fetchTests} from "../../../store/actions/actions";
 
-import { userAction } from "../../../store/actions/userActions";
+import {userAction} from "../../../store/actions/userActions";
 
-const mapStateToProps = (state) => {
-    return {
-        name: state.userReducer.user.name,
-        surname: state.userReducer.user.surname,
-        email: state.userReducer.user.email,
-        isLogin: state.userReducer.user.isLogin,
-    }
-};
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        onSuccess: (data) => {
-            console.log(data)
-            return dispatch(userAction.googleAuthSuccess(data))
-        },
-        setUser: (user) => dispatch({type: 'SET_USER', payload : user}),
-    }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(({ onSuccess, name, surname, email, isLogin, setUser}) => {
+const GoogleAuth = ({onSuccess, user,name, surname, email, isLogin, setUser}) => {
 
     const responseGoogle = (response) => {
-        console.log(response);
+        console.log('--------------');
+        console.log(user);
+        console.log('--------------');
         setUser({
             name: response.profileObj.givenName,
             surname: response.profileObj.familyName,
@@ -40,16 +22,11 @@ export default connect(mapStateToProps, mapDispatchToProps)(({ onSuccess, name, 
         });
     };
 
-    console.log(name);
-    console.log(surname);
-    console.log(email);
-    console.log(isLogin);
-
     return (
         <div className={'googleAuth'}>
             <GoogleLogin
                 //clientId="996107266209-et7i2pjho76nk7c9u18aiqmq85io1cq5.apps.googleusercontent.com"       //host
-                clientId="996107266209-ep1itqnpnlo7o1lpsrmutqn9it31fu62.apps.googleusercontent.com"     //localhost
+                clientId="996107266209-n6iv1b4as0jedtu1fqgrr93ca289onr2.apps.googleusercontent.com"     //localhost
                 buttonText="Google Authorization"
                 onSuccess={onSuccess}
                 onFailure={responseGoogle}
@@ -57,4 +34,23 @@ export default connect(mapStateToProps, mapDispatchToProps)(({ onSuccess, name, 
             />
         </div>
     )
-});
+};
+
+const mapStateToProps = (state) => {
+    return {
+        user: state.user,
+        name: state.user.user.name,
+        surname: state.user.user.surname,
+        email: state.user.user.email,
+        isLogin: state.user.user.isLogin,
+    }
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onSuccess: (data) => dispatch(userAction.googleAuthSuccess(data)),
+        setUser: (user) => dispatch({type: 'SET_USER', payload: user}),
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(GoogleAuth)

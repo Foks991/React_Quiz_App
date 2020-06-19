@@ -1,15 +1,17 @@
 import React from 'react';
 import {connect} from "react-redux";
-import { getReactQuiz } from "../../../../store/reducers/rootReducer";
 
-const Title = ({ quizTitle }) =>
-    <div className={'title'}>
-        <h1>{ quizTitle }</h1>
-    </div>;
+const Title = ({ st }) =>{
+    console.log(st);
+    return(<div className={'title'}>
+        <h1>{ 'a' }</h1>
+    </div>)
+};
+
 
 const mapStateToProps = (state) => {
     return {
-        quizTitle: getReactQuiz(state).quizTitle
+        st: state.quiz,
     }
 };
 

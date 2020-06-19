@@ -12,7 +12,6 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import rootSaga from './store/saga/rootSaga';
 import {Provider} from 'react-redux';
-//import thunk from 'redux-thunk'
 
 const root = document.getElementById('root');
 

@@ -7,7 +7,10 @@ import Navigation from "./Navigation/Navigation";
 
 import {connect} from "react-redux";
 
-const Quiz = ({tests}) => {
+import { getQuiz } from "../../store/reducers/rootReducer";
+
+const Quiz = ({tests, state}) => {
+    console.log(getQuiz(state));
 
     const [quiz, setQuiz] = useState([...tests]);
 
@@ -57,8 +60,8 @@ const Quiz = ({tests}) => {
     };
 
     return(
-        <div className={'Quiz'}>
-            <div className={'tests'}>
+        <div className={'QuizContainer'}>
+            <div className={'activeTests'}>
 
                 {quiz.map(item => {
                     const {answers, selectedAnswer, question, id} = item;
@@ -104,9 +107,10 @@ const Quiz = ({tests}) => {
 
 
 const mapStateToProps = (state) => {
-    const quizType = sessionStorage.getItem('quizType');
+    //const quizType = sessionStorage.getItem('quizType');
     return {
-        tests: state.quiz[`${quizType}`].tests
+        state: state,
+        tests: state.quiz.cssQuiz.tests
     }
 };
 
