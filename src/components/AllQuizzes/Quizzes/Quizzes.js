@@ -1,25 +1,28 @@
 import React from "react";
 import {connect} from "react-redux";
 
-const setQuizTypeToStorage = (quizType) => sessionStorage.setItem('quizType', quizType);
+const setSelectedTestToStorage = (selectedTest) => sessionStorage.setItem('selectedTest', selectedTest);
 
-const Quizzes = ({quiz, quizType}) => {
+const Quizzes = ({quiz}) => {
 
     return (
-        <div>
-            {Object.keys(quiz).map(item =>
-            <div
-                className={'quizz'}
-                key={quiz[item].id}
-                id={quiz[item].id}
-                onClick={(e) => {
-                    let el = e.target;
-                    setQuizTypeToStorage(el.id);
-                    window.location = 'http://testtesst.hostenko.net/quiz'
-                }}
-            >{quiz[item].id}
-            </div>
-        )}
+        <div className={'quizList'}>
+            {Object.keys(quiz).map(item => {
+                    if (item.endsWith('Quiz')) {
+                        return <div
+                            className={'quizz'}
+                            key={quiz[item].id}
+                            id={quiz[item].id}
+                            onClick={(e) => {
+                                let el = e.target;
+                                setSelectedTestToStorage(el.id);
+                                window.location = 'http://testtesst.hostenko.net/quiz'
+                            }}
+                        >{quiz[item].id}
+                        </div>
+                    }
+                }
+            )}
         </div>
     )
 };
@@ -27,7 +30,7 @@ const Quizzes = ({quiz, quizType}) => {
 const mapStateToProps = (state) => {
     return {
         quiz: state.quiz,
-        quizType: state.user.quizType
+        selectedTest: state.user.selectedTest
     }
 };
 
