@@ -6,9 +6,9 @@ export default ({ question, activeQuestion, quiz, ...rest }) => (
     <>
         <Title/>
 
-        <div className={'question'}>
-            <div>{activeQuestion + 1}. {question}</div>
-            <div>{activeQuestion + 1} из {quiz.length}</div>
+        <div className={'question-block'}>
+            <div className={'question'}>{activeQuestion + 1}. {question}</div>
+            <div className={'current-question-number'}>{activeQuestion + 1} из {quiz.length}</div>
         </div>
 
         <AnswerList

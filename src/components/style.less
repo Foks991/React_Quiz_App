@@ -12,8 +12,9 @@
 
 @import "Quiz/Result/result";
 
-@import "AllQuizzes/allQuizes";
-@import "AllQuizzes/GoogleAuth/googleAuth";
+@import "Main/Main";
+@import "Main/GoogleAuth/googleAuth";
+@import "Main/Quizzes/Quizzes";
 
 *{
   margin: 0;
@@ -53,8 +54,10 @@ body{
   .App{
     flex-direction: column;
   }
-  .tests{
-    height: 450px;
+  .QuizContainer{
+    flex-direction: column;
+  }
+  .activeTests{
     width: 100%;
   }
   .navigation{
@@ -63,14 +66,16 @@ body{
   .btn-1{
     padding: 5px 20px;
   }
-  .answersList li{
-    margin-left: 30px;
+  .answersList li {
+
   }
   .nav-list{
     height: auto;
     flex-direction: initial;
+    width: 80%;
+    margin: 20px auto;
   }
-  .buttons-block .btn-1{
+/*  .buttons-block .btn-1{
     margin: 0 20px 20px;
-  }
+  }*/
 }

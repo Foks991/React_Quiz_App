@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Result from "./Result/Result";
 import Buttons from "./ActiveQuiz/Buttons/Buttons";
@@ -6,12 +6,14 @@ import ActiveQuiz from "./ActiveQuiz/ActiveQuiz";
 import Navigation from "./Navigation/Navigation";
 
 import {connect} from "react-redux";
+import {getQuiz} from "../../store/reducers/quizReducer";
+import {getSelectedTestFromStorage} from "../../sessionStorage/sessionStorage";
+import {quizActions} from '../../store/actions/quizActions'
 
-import { getQuiz } from "../../store/reducers/rootReducer";
-
-const Quiz = ({tests, state}) => {
-    console.log(getQuiz(state));
-
+const Quiz = ({tests, setSelectedTest}) => {
+    useEffect(() => {
+        setSelectedTest(getSelectedTestFromStorage())
+    }, []);
     const [quiz, setQuiz] = useState([...tests]);
 
     const [testIsDone, setTestIsDone] = useState(false);
@@ -107,11 +109,15 @@ const Quiz = ({tests, state}) => {
 
 
 const mapStateToProps = (state) => {
-    //const quizType = sessionStorage.getItem('quizType');
     return {
-        state: state,
-        tests: state.quiz.cssQuiz.tests
+        tests: getQuiz(state)[getSelectedTestFromStorage()].tests
     }
 };
 
-export default connect(mapStateToProps, null)(Quiz);
+const mapDispatchToProps = (dispatch) => {
+  return{
+      setSelectedTest: (test) => dispatch(quizActions.setSelectedTest(test))
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Quiz);

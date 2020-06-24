@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 import './components/style.less';
 
 import Quiz from './components/Quiz/Quiz';
-import AllQuizzes from './components/AllQuizzes/AllQuizzes';
+import Main from './components/Main/Main';
 
 import rootReducer from "./store/reducers/rootReducer";
 import {createStore, applyMiddleware} from 'redux';
@@ -24,7 +24,7 @@ const App = (
     <BrowserRouter>
         <Provider store={store}>
             <Switch>
-                <Route path={'/'} component={AllQuizzes} exact/>
+                <Route path={'/'} component={Main} exact/>
                 <Route path={'/quiz'} component={Quiz} exact/>
             </Switch>
         </Provider>

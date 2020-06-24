@@ -4,26 +4,422 @@
     "quizTitle": "Html Quiz",
     "tests": [
       {
-        "correctAnswers": [
-          1
-        ],
-        "question": "What does HTML stand for?",
+        "correctAnswers": [2],
+        "question": "What is the difference between XML and HTML?",
         "answers": [
-          {
-            "text": "Hyper Text Markup Language",
-            "id": 1
-          },
-          {
-            "text": "Home Tool Markup Language",
-            "id": 2
-          },
-          {
-            "text": "Hyperlinks and Text Markup Language",
-            "id": 3
-          }
+          {"text": "HTML is used for exchanging data, XML is not.",
+            "id": 1},
+          {"text": "XML is used for exchanging data, HTML is not",
+            "id": 2}, {
+            "text": "HTML can have user defined tags, XML cannot",
+            "id": 3}
         ],
         "selectedAnswer": null,
         "id": 0
+      },
+      {
+        "correctAnswers": [2],
+        "question": "Opening Tag of HTML Tag is called as ________.",
+        "answers": [
+          {"text": "Closed Tag",
+            "id": 1},
+          {"text": "Starting Tag",
+            "id": 2}, {
+            "text": "Forward Tag",
+            "id": 3}, {
+            "text": "Enging Tag",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 1
+      },
+      {
+        "correctAnswers": [1],
+        "question": "HTML stands for ________.",
+        "answers": [
+          {"text": "Hyper Text Markup Language",
+            "id": 1},
+          {"text": "Hyper Text Makeup Language",
+            "id": 2}, {
+            "text": "None of these",
+            "id": 3}, {
+            "text": "Hyper Tech Markup Language",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 2
+      },
+      {
+        "correctAnswers": [2],
+        "question": "HTML program is saved using _________ extension.",
+        "answers": [
+          {"text": ".htl",
+            "id": 1},
+          {"text": ".html",
+            "id": 2}, {
+            "text": ".hml",
+            "id": 3}, {
+            "text": ".htlm",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 3
+      },
+      {
+        "correctAnswers": [4],
+        "question": "Who was the primary author of HTML?",
+        "answers": [
+          {"text": "Brendan Eich",
+            "id": 1},
+          {"text": "Sabeer Bhatiya",
+            "id": 2}, {
+            "text": "Google Inc.",
+            "id": 3}, {
+            "text": "Tim Berners-Lee",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 4
+      },
+      {
+        "correctAnswers": [2],
+        "question": "Which of the following attributes comes in handy when borders have to be put between groups of columns instead of every column?",
+        "answers": [
+          {"text": "Col",
+            "id": 1},
+          {"text": "Colgroup",
+            "id": 2}, {
+            "text": "Rowspan",
+            "id": 3}, {
+            "text": "Row",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 5
+      },
+      {
+        "correctAnswers": [1],
+        "question": "Which of the following is valid colour code ?",
+        "answers": [
+          {"text": "#000000;",
+            "id": 1},
+          {"text": "#0000000;",
+            "id": 2}, {
+            "text": "#00000000;",
+            "id": 3}, {
+            "text": "#000000000;",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 6
+      },
+      {
+        "correctAnswers": [3],
+        "question": "Caption Tag in HTML ?",
+        "answers": [
+          {"text": "Is used to display the Title for table at the top",
+            "id": 1},
+          {"text": "Is used to display the Title for table at the bottom",
+            "id": 2}, {
+            "text": "Both",
+            "id": 3}, {
+            "text": "None",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 7
+      },
+      {
+        "correctAnswers": [3],
+        "question": "Which of the following is used increase the row height?",
+        "answers": [
+          {"text": "Cellspacing",
+            "id": 1},
+          {"text": "Cellpadding",
+            "id": 2}, {
+            "text": "Row span",
+            "id": 3}, {
+            "text": "Col span",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 8
+      },
+      {
+        "correctAnswers": [4],
+        "question": "Which of the following is used increase the col width?",
+        "answers": [
+          {"text": "Cellspacing",
+            "id": 1},
+          {"text": "Cellpadding",
+            "id": 2}, {
+            "text": "Row span",
+            "id": 3}, {
+            "text": "Col span",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 9
+      },
+      {
+        "correctAnswers": [3],
+        "question": "DOM stands for",
+        "answers": [
+          {"text": "Document object model",
+            "id": 1},
+          {"text": "Data object model",
+            "id": 2}, {
+            "text": "Document Oriented model",
+            "id": 3}, {
+            "text": "Data oriented model",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 10
+      },
+      {
+        "correctAnswers": [3],
+        "question": "What is mean by DTD ?",
+        "answers": [
+          {"text": "Document type data",
+            "id": 1},
+          {"text": "Data type definition",
+            "id": 2}, {
+            "text": "Document type definition",
+            "id": 3}, {
+            "text": "Definition type document",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 11
+      },
+      {
+        "correctAnswers": [3],
+        "question": "Text/Html is called the __________ of the page",
+        "answers": [
+          {"text": "Content type",
+            "id": 1},
+          {"text": "MIME type",
+            "id": 2}, {
+            "text": "Content type/MIME type",
+            "id": 3}, {
+            "text": "None of these",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 12
+      },
+      {
+        "correctAnswers": [1],
+        "question": "The href attribute in the link tag specifies the:",
+        "answers": [
+          {"text": "Destination of a link.",
+            "id": 1},
+          {"text": "Link",
+            "id": 2}, {
+            "text": "Hypertext",
+            "id": 3}, {
+            "text": "None of the above",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 13
+      },
+      {
+        "correctAnswers": [1],
+        "question": "Is width=”100” and width=”100%” the same?",
+        "answers": [
+          {"text": "No",
+            "id": 1},
+          {"text": "Yes",
+            "id": 2}
+        ],
+        "selectedAnswer": null,
+        "id": 14
+      },
+      {
+        "correctAnswers": [3],
+        "question": "What are <div> tags used for?",
+        "answers": [
+          {"text": "To replace paragraphs. i.e. p tags",
+            "id": 1},
+          {"text": "To logically divide the paragraphs",
+            "id": 2}, {
+            "text": "To logically divide the document",
+            "id": 3}, {
+            "text": "To provide space between tables",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 15
+      },
+      {
+        "correctAnswers": [2],
+        "question": "How can we resize the image?",
+        "answers": [
+          {"text": "Using resize attribute",
+            "id": 1},
+          {"text": "Using height and width",
+            "id": 2}, {
+            "text": "Using size attribute",
+            "id": 3}, {
+            "text": "Using rs attribute",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 16
+      },
+      {
+        "correctAnswers": [1],
+        "question": "When creating a Web document, what format is used to express an image's height and width?",
+        "answers": [
+          {"text": "Pixels",
+            "id": 1},
+          {"text": "Centimeters",
+            "id": 2}, {
+            "text": "Dots per inch",
+            "id": 3}, {
+            "text": "Inches",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 17
+      },
+      {
+        "correctAnswers": [1],
+        "question": "What are meta tags used for?",
+        "answers": [
+          {"text": "To store information usually relevant to browsers and search engines",
+            "id": 1},
+          {"text": "To only store information usually relevant to browsers",
+            "id": 2}, {
+            "text": "To only store information about search engines",
+            "id": 3}, {
+            "text": "To store information about external links",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 18
+      },
+      {
+        "correctAnswers": [3],
+        "question": "For frames in HTML, how do you specify the rest of the screen?",
+        "answers": [
+          {"text": "Using &",
+            "id": 1},
+          {"text": "Using $",
+            "id": 2}, {
+            "text": "Using *",
+            "id": 3}, {
+            "text": "Using #",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 19
+      },
+      {
+        "correctAnswers": [3],
+        "question": "ASCII stands for______",
+        "answers": [
+          {"text": " American Standard Code for Informal Interchange",
+            "id": 1},
+          {"text": " American Standard Code for Interchanging Information",
+            "id": 2}, {
+            "text": " American Standard Code for Information Interchange",
+            "id": 3}, {
+            "text": " American Standard Code for Information Interval",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 20
+      },
+      {
+        "correctAnswers": [3],
+        "question": "While searching on the Internet, you decide to check in more than one search engine because?",
+        "answers": [
+          {"text": "all web users prefer this technique",
+            "id": 1},
+          {"text": "they will avoid repetition of information",
+            "id": 2}, {
+            "text": "each engine produces different results",
+            "id": 3}, {
+            "text": "they will avoid false information",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 21
+      },
+      {
+        "correctAnswers": [2],
+        "question": "<meta> tag cannot be defined in the <head> tag.",
+        "answers": [
+          {"text": "False",
+            "id": 1},
+          {"text": "True",
+            "id": 2}
+        ],
+        "selectedAnswer": null,
+        "id": 22
+      },
+      {
+        "correctAnswers": [2],
+        "question": "Can I play audios in HTML?",
+        "answers": [
+          {"text": "No",
+            "id": 1},
+          {"text": "Yes",
+            "id": 2}
+        ],
+        "selectedAnswer": null,
+        "id": 23
+      },
+      {
+        "correctAnswers": [1],
+        "question": "HTML documents are saved in?",
+        "answers": [
+          {"text": "ASCII text",
+            "id": 1},
+          {"text": "Machine language codes",
+            "id": 2}, {
+            "text": "Special Binary format",
+            "id": 3}, {
+            "text": "None of these",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 24
+      },
+      {
+        "correctAnswers": [4],
+        "question": "What does an HTML tag do?",
+        "answers": [
+          {"text": "It determines the organizational structure of your Web site.",
+            "id": 1},
+          {"text": "It connects your web site to an operating environment.",
+            "id": 2}, {
+            "text": "It hides programming instructions from view.",
+            "id": 3}, {
+            "text": "It specifies formatting and layout instructions for your web page.",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 25
+      },
+      {
+        "correctAnswers": [4],
+        "question": "Which of the following are attributes of Font Tag ?",
+        "answers": [
+          {"text": "Face",
+            "id": 1},
+          {"text": "Size",
+            "id": 2}, {
+            "text": "Color",
+            "id": 3}, {
+            "text": "All of above",
+            "id": 4}
+        ],
+        "selectedAnswer": null,
+        "id": 26
       }
     ]
   },
@@ -564,5 +960,9 @@
         "id": 19
       }
     ]
-  }
+  },
+  "selectedTest" : null
 }
+
+
+

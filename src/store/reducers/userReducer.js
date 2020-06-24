@@ -5,24 +5,12 @@ const initialState = {
         name: null,
         surname: null,
         email: null,
-        isLogin: false,
     },
-    quizType : null,
     isAuth: false,
 };
 
-export const user = (state = initialState, action) => {
+export const UserReducer = (state = initialState, action) => {
     switch (action.type) {
-        case userActionTypes.SET_USER:
-            return {
-                ...state,
-                user: action.payload
-            };
-        case userActionTypes.SET_QUIZ_TYPE:
-            return {
-                ...state,
-                quizType: action.payload
-            };
         case userActionTypes.GOOGLE_AUTH_SUCCESS:
             const { profileObj } = action.payload;
             const { email, familyName, givenName } = profileObj;
@@ -36,10 +24,9 @@ export const user = (state = initialState, action) => {
                 },
                 isAuth: true,
             };
-        default:
-            return state
+        default: return state
     }
 };
 
-export const getIsAuth = state => state.isAuth;
-export const getUser = state => state.user;
+export const getUser = state => state.UserReducer.user;
+export const getIsAuth = state => state.UserReducer.isAuth;

@@ -1,11 +1,4 @@
-.allQuizzes{
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
-.quizz{
+.quizz {
   height: 200px;
   width: 300px;
   border: 1px solid white;
@@ -16,3 +9,8 @@
   font-size: 32px;
   cursor: pointer;
 }
+.quizList {
+  display: flex;
+  justify-content: center;
+}
+/*# sourceMappingURL=Quizzes.css.map */

@@ -1,17 +1,19 @@
 import React from 'react';
 import {connect} from "react-redux";
+import {getQuiz} from "../../../../store/reducers/quizReducer";
+import {getSelectedTestFromStorage} from "../../../../sessionStorage/sessionStorage";
 
-const Title = ({ st }) =>{
-    console.log(st);
+const Title = ({ quizTitle }) =>{
+    console.log(quizTitle);
     return(<div className={'title'}>
-        <h1>{ 'a' }</h1>
+        <h1>{ quizTitle }</h1>
     </div>)
 };
 
 
 const mapStateToProps = (state) => {
     return {
-        st: state.quiz,
+        quizTitle: getQuiz(state)[getSelectedTestFromStorage()].quizTitle,
     }
 };
 
