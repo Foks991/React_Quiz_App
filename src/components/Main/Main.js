@@ -18,7 +18,7 @@ const Main = (({user, isAuth}) => {
                     <>
                         <div className={'userGreetings'}>
                             <p>{`Hello ${user.name}!!!`}</p>
-                            <p>Choose test for test your skills</p>
+                            <p>Choose quiz for test your skills</p>
                         </div>
                         <Quizzes/>
                     </>
