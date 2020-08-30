@@ -26,6 +26,9 @@
   margin: 0 auto;
   background-color: antiquewhite;
 }
+.current-question-number {
+  width: 150px;
+}
 .title {
   height: 80px;
   background-color: azure;
