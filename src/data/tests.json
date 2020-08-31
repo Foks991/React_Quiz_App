@@ -2,7 +2,7 @@
   "htmlQuiz": {
     "id": "htmlQuiz",
     "quizTitle": "Html Quiz",
-    "tests": [
+    "questions": [
       {
         "correctAnswers": [
           2
@@ -682,7 +682,7 @@
   "cssQuiz": {
     "id": "cssQuiz",
     "quizTitle": "Css Quiz",
-    "tests": [
+    "questions": [
       {
         "correctAnswers": [
           4
@@ -1280,7 +1280,7 @@
   "reactQuiz": {
     "id": "reactQuiz",
     "quizTitle": "React Quiz",
-    "tests": [
+    "questions": [
       {
         "correctAnswers": [
           1
@@ -1786,8 +1786,7 @@
         "id": 19
       }
     ]
-  },
-  "selectedTest": null
+  }
 }
 
 

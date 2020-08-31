@@ -1,10 +1,12 @@
 import React from 'react'
+import { connect } from "react-redux";
+import { getSelectedQuizQuestions} from "../../../../store/rootReducer";
 
-export default function Progress({quiz}) {
+export const Progress = ({selectedQuizQuestions}) => {
 
   const quizPercentDone = () => {
-    const answersCount = quiz.length;
-    const completedTestsCount = quiz.filter(item => item.selectedAnswer !== null);
+    const answersCount = selectedQuizQuestions.length;
+    const completedTestsCount = selectedQuizQuestions.filter(item => item.selectedAnswer !== null);
     const percentage = (completedTestsCount.length * 100) / answersCount;
 
     return (!Number.isInteger(percentage)) ? percentage.toFixed(1) : percentage;
@@ -21,4 +23,13 @@ export default function Progress({quiz}) {
       </div>
     </div>
   )
-}
+};
+
+const mapStateToProps = (state) => ({
+  selectedQuizQuestions: getSelectedQuizQuestions(state),
+});
+
+const mapDispatchToProps = {
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Progress);

@@ -1,20 +1,33 @@
 import React from 'react';
-import AnswerList from './AnswersList/AnswersList'
+import { connect } from "react-redux";
 import Title from "./Title/Title";
+import AnswerList from './AnswersList/AnswersList'
+import {
+  getActiveQuestion,
+  getSelectedQuizQuestions
+} from "../../../store/rootReducer";
 
-export default ({question, activeQuestion, quiz, ...rest}) => (
+const ActiveQuiz = ({ question, activeQuestion, selectedQuizQuestions, answers }) =>{
+
+  return (
   <>
     <Title/>
 
     <div className={'question-block'}>
       <div className={'question'}>{activeQuestion + 1}. {question}</div>
-      <div className={'current-question-number'}>Question {activeQuestion + 1} of {quiz.length}</div>
+      <div className={'current-question-number'}>Question {activeQuestion + 1} of {selectedQuizQuestions.length}</div>
     </div>
 
-    <AnswerList
-      quiz={quiz}
-      activeQuestion={activeQuestion}
-      {...rest}
-    />
+    <AnswerList answers={answers}/>
   </>
-);
+)};
+
+const mapStateToProps = (state) => ({
+  activeQuestion: getActiveQuestion(state),
+  selectedQuizQuestions: getSelectedQuizQuestions(state),
+});
+
+const mapDispatchToProps = {
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ActiveQuiz);

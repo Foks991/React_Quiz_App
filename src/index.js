@@ -1,3 +1,4 @@
+const { composeWithDevTools } = require('redux-devtools-extension');
 import React from 'react';
 import { render } from 'react-dom';
 import './components/style.less';
@@ -10,13 +11,13 @@ import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import rootSaga from './store/saga/rootSaga';
+import rootSaga from './store/rootSaga';
 import { Provider } from 'react-redux';
 
 const root = document.getElementById('root');
 
 const sagaMiddleware = createSagaMiddleware();
-const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));
 
 sagaMiddleware.run(rootSaga);
 

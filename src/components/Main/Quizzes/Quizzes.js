@@ -1,39 +1,39 @@
 import React from "react";
+import { connect } from "react-redux";
+import { useHistory } from 'react-router-dom';
+import { getAllQuizzes } from "../../../store/rootReducer";
+import { quizActions } from "../../../store/actions/quizActions";
 
-import {connect} from "react-redux";
+const Quizzes = ({allQuizzes, setSelectedTest}) => {
+  const history = useHistory();
 
-import { getQuiz } from "../../../store/reducers/quizReducer";
-import { getUser } from "../../../store/reducers/userReducer";
-import { setSelectedTestToStorage } from "../../../sessionStorage/sessionStorage";
-import { setUserToStorage } from "../../../sessionStorage/sessionStorage";
-
-const Quizzes = ({quiz, user}) =>
-  <div className={'quizList'}>
-    {Object.keys(quiz).map(item => {
-        if (item.endsWith('Quiz')) {
-          return <div
-            className={'quiz'}
-            key={quiz[item].id}
-            id={quiz[item].id}
-            onClick={(e) => {
-              let el = e.target;
-              setSelectedTestToStorage(el.id);
-              setUserToStorage(user);
-              window.location = 'http://localhost:3000/quiz'
-            }}
-          >{quiz[item].quizTitle}
-          </div>
-        }
+  return (<div className={'quizList'}>
+    {Object.keys(allQuizzes).map(item => {
+      return <div
+        className={'quiz'}
+        key={allQuizzes[item].id}
+        id={allQuizzes[item].id}
+        onClick={(e) => {
+          const el = e.target;
+          const quizId = el.id;
+          setSelectedTest(allQuizzes[quizId]);
+          history.push({pathname: '/quiz'});
+        }}
+        >
+          {allQuizzes[item].quizTitle}
+        </div>
       }
     )}
-  </div>;
-
-
-const mapStateToProps = (state) => {
-  return {
-    quiz: getQuiz(state),
-    user: getUser(state),
-  }
+  </div>)
 };
 
-export default connect(mapStateToProps, null)(Quizzes)
+
+const mapStateToProps = (state) => ({
+  allQuizzes: getAllQuizzes(state),
+});
+
+const mapDispatchToProps = {
+  setSelectedTest: (id) => quizActions.setSelectedTest(id)
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Quizzes)

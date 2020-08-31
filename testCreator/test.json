@@ -1,0 +1,34 @@
+{
+  "TypescriptQuiz": {
+    "id": "TypescriptQuiz",
+    "quizTitle": "Typescript Quiz",
+    "tests": [
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "What is TypeScript?",
+        "answers": [
+          {
+            "text": "Programming language",
+            "id": 1
+          },
+          {
+            "text": "Css style",
+            "id": 2
+          },
+          {
+            "text": "Angulyar library",
+            "id": 3
+          },
+          {
+            "text": "Js library",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 0
+      }
+    ]
+  }
+}
