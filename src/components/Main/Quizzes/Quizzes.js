@@ -3,6 +3,11 @@ import { connect } from "react-redux";
 import { useHistory } from 'react-router-dom';
 import { getAllQuizzes } from "../../../store/rootReducer";
 import { quizActions } from "../../../store/actions/quizActions";
+import { camelToKebab} from "../../../helpers/textFormatter";
+import { setQuizToStorage } from "../../../sessionStorage/quiz";
+import html from '../../../images/html.svg'
+import css from '../../../images/css.svg'
+import react from '../../../images/react.svg'
 
 const Quizzes = ({allQuizzes, setSelectedTest}) => {
   const history = useHistory();
@@ -14,13 +19,14 @@ const Quizzes = ({allQuizzes, setSelectedTest}) => {
         key={allQuizzes[item].id}
         id={allQuizzes[item].id}
         onClick={(e) => {
-          const el = e.target;
-          const quizId = el.id;
+          const quizId = e.target.id;
           setSelectedTest(allQuizzes[quizId]);
-          history.push({pathname: '/quiz'});
+          setQuizToStorage(quizId);
+          history.push({pathname: `/${camelToKebab(quizId)}`});
         }}
         >
           {allQuizzes[item].quizTitle}
+        <img src={`images/${allQuizzes[item].img}.svg`} alt=""/>
         </div>
       }
     )}

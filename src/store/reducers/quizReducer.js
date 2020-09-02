@@ -3,10 +3,11 @@ import test from '../../data/tests'
 
 export const quizInitialState = {
   allQuizzes: {...test},
+
   selectedQuiz: {
     id: "",
-    questions: [],
     quizTitle: "",
+    questions: [],
   },
   activeQuestion: 0,
   answerLabels: ['A', 'B', 'C', 'D'],
@@ -29,8 +30,8 @@ export default function (state = quizInitialState, action) {
         selectedQuiz: {
           ...state.selectedQuiz,
           id,
+          quizTitle,
           questions,
-          quizTitle
         }
       }
     }
@@ -91,6 +92,8 @@ export default function (state = quizInitialState, action) {
       newQuestionState.selectedAnswer = answerId;
       questions[questionIndex] = newQuestionState;
 
+
+      console.log({...state});
       return {
         ...state,
         selectedQuiz: {

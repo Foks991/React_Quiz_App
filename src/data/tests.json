@@ -677,7 +677,8 @@
         "selectedAnswer": null,
         "id": 26
       }
-    ]
+    ],
+    "img": "html"
   },
   "cssQuiz": {
     "id": "cssQuiz",
@@ -1275,7 +1276,8 @@
         "selectedAnswer": null,
         "id": 24
       }
-    ]
+    ],
+    "img": "css"
   },
   "reactQuiz": {
     "id": "reactQuiz",
@@ -1785,9 +1787,7 @@
         "selectedAnswer": null,
         "id": 19
       }
-    ]
+    ],
+    "img": "react"
   }
 }
-
-
-

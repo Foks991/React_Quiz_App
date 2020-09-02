@@ -2,7 +2,7 @@ import React from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 
 const minuteSeconds = 60;
-const hourSeconds = 3600;
+const hourSeconds = 1800;
 
 const timerProps = {
   isPlaying: true,
@@ -41,10 +41,7 @@ export default function Timer() {
         ]}
       >
         {({elapsedTime}) =>
-          renderTime(
-            "min",
-            getTimeMinutes(hourSeconds - elapsedTime / 1000)
-          )
+          renderTime("min", getTimeMinutes(hourSeconds - elapsedTime / 1000))
         }
       </CountdownCircleTimer>
       <CountdownCircleTimer

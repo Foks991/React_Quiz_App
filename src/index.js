@@ -20,13 +20,19 @@ const sagaMiddleware = createSagaMiddleware();
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));
 
 sagaMiddleware.run(rootSaga);
+import { camelToKebab } from "./helpers/textFormatter";
+
+const quizzesRoutes = Object.keys(store.getState().quiz.allQuizzes).map((el, index) =>(
+  <Route key={el + index} path={`/${camelToKebab(el)}`} component={Quiz}/>
+));
+
 
 const App = (
   <BrowserRouter>
     <Provider store={store}>
       <Switch>
         <Route path={'/'} component={Main} exact/>
-        <Route path={'/quiz'} component={Quiz} exact/>
+        {quizzesRoutes}
       </Switch>
     </Provider>
   </BrowserRouter>
