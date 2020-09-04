@@ -1,60 +1,73 @@
 import React from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
+import { connect } from 'react-redux';
+import { getQuizIsDone } from "../../../../store/rootReducer";
+import {quizActions} from "../../../../store/actions/quizActions";
 
-const minuteSeconds = 60;
-const hourSeconds = 1800;
+const Timer = ({quizIsDone}) => {
 
-const timerProps = {
-  isPlaying: true,
-  size: 80,
-  strokeWidth: 6
-};
+  const minuteSeconds = 60;
+  const hourSeconds = 1800;
 
-const renderTime = (dimension, time) => {
-  return (
-    <div className="time-wrapper">
-      <div className="time">{time}</div>
-      <div>{dimension}</div>
-    </div>
-  );
-};
+  const timerProps = {
+    isPlaying: true,
+    size: 80,
+    strokeWidth: 6,
+    colors: [["#16be00"]]
+  };
 
-const getTimeSeconds = time => (minuteSeconds - time / 1000) | 0;
-const getTimeMinutes = time => ((time % hourSeconds) / minuteSeconds) | 0;
+  const renderTime = (dimension, time) => {
+    return (
+      <div className="time-wrapper">
+        <div className="time">{time}</div>
+        <div>{dimension}</div>
+      </div>
+    );
+  };
+
+  const getTimeSeconds = time => (minuteSeconds - time / 1000) | 0;
+  const getTimeMinutes = time => ((time % hourSeconds) / minuteSeconds) | 0;
 
 
-export default function Timer() {
-  const stratTime = Date.now(); // use UNIX timestamp in seconds
-  const endTime = stratTime + 60 * 60; // use UNIX timestamp in seconds
+  const stratTime = Date.now();
+  const endTime = stratTime + 60 * 60;
 
   const remainingTime = endTime - stratTime;
 
   return (
     <div className="Timer">
-      <CountdownCircleTimer
-        {...timerProps}
-        colors={[["#16be00"]]}
-        duration={hourSeconds}
-        initialRemainingTime={remainingTime % hourSeconds}
-        onComplete={totalElapsedTime => [
-          remainingTime - totalElapsedTime > minuteSeconds
-        ]}
-      >
-        {({elapsedTime}) =>
-          renderTime("min", getTimeMinutes(hourSeconds - elapsedTime / 1000))
-        }
-      </CountdownCircleTimer>
-      <CountdownCircleTimer
-        {...timerProps}
-        colors={[["#16be00"]]}
-        duration={minuteSeconds}
-        initialRemainingTime={remainingTime % minuteSeconds}
-        onComplete={totalElapsedTime => [remainingTime - totalElapsedTime > 0]}
-      >
-        {({elapsedTime}) =>
-          renderTime("sec", getTimeSeconds(elapsedTime))
-        }
-      </CountdownCircleTimer>
+      {!quizIsDone ?
+        <>
+          <CountdownCircleTimer
+            {...timerProps}
+            duration={hourSeconds}
+            initialRemainingTime={remainingTime % hourSeconds}
+            onComplete={totalElapsedTime => [remainingTime - totalElapsedTime > minuteSeconds]}
+          >
+            {({elapsedTime}) => renderTime("min", getTimeMinutes(hourSeconds - elapsedTime / 1000))}
+          </CountdownCircleTimer>
+
+          <CountdownCircleTimer
+            {...timerProps}
+            duration={minuteSeconds}
+            initialRemainingTime={remainingTime % minuteSeconds}
+            onComplete={totalElapsedTime => [remainingTime - totalElapsedTime > 0]}
+          >
+            {({elapsedTime}) => renderTime("sec", getTimeSeconds(elapsedTime))}
+          </CountdownCircleTimer>
+        </>
+        :
+        <>
+          <CountdownCircleTimer {...timerProps} colors={[["#be0011"]]}>{() => renderTime("min", 0)}</CountdownCircleTimer>
+          <CountdownCircleTimer{...timerProps} colors={[["#be0011"]]}>{() => renderTime("sec", 0)}</CountdownCircleTimer>
+        </>
+      }
     </div>
   );
-}
+};
+
+const mapStateToProps = (state) => ({
+  quizIsDone: getQuizIsDone(state)
+});
+
+export default connect(mapStateToProps)(Timer);

@@ -6,23 +6,37 @@ import ActiveQuiz from "./ActiveQuiz/ActiveQuiz";
 import { quizActions } from "../../store/actions/quizActions";
 import Navigation from "./Navigation/Navigation";
 import { getQuizFromStorage } from "../../sessionStorage/quiz";
+import { useHistory } from 'react-router-dom'
 import {
   getActiveQuestion, getAllQuizzes,
   getSelectedQuiz,
   getSelectedQuizQuestions
 } from "../../store/rootReducer";
 
-const Quiz = ({ selectedQuizQuestions, activeQuestion, allQuizzes, setSelectedTest, history }) => {
+const Quiz = ({ selectedQuizQuestions, activeQuestion, allQuizzes, setSelectedTest, history, chooseQuestion }) => {
+
+
 
   useEffect(() => {
     const quizId = getQuizFromStorage();
-    quizId ? setSelectedTest(allQuizzes[quizId]) : history.push({pathname: `/`});
+    const selectedQuiz = {...allQuizzes[quizId]};
+    chooseQuestion(0);
+    quizId ? setSelectedTest(selectedQuiz) : history.push({pathname: `/`});
+    window.addEventListener("popstate", (e) => {
+      const result = confirm('You will lose your progress. Do you really want to leave? ');
+
+      if(!result){
+        history.push({pathname: `/html-quiz`})
+      }else{
+        history.push({pathname: `/`})
+      }
+    });
   },[]);
 
   return (
-    <div className={'QuizContainer'}>
-      <div className={'activeTests'}>
 
+    selectedQuizQuestions ? <div className={'QuizContainer'}>
+      <div className={'activeTests'}>
         {selectedQuizQuestions.map(item => {
           const {answers, question, id} = item;
 
@@ -37,12 +51,13 @@ const Quiz = ({ selectedQuizQuestions, activeQuestion, allQuizzes, setSelectedTe
 
         <Buttons/>
         <Result/>
+
       </div>
 
       <div className={'navigation'}>
         <Navigation/>
       </div>
-    </div>
+    </div> : null
   )
 };
 
@@ -54,7 +69,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-  setSelectedTest:(id) => quizActions.setSelectedTest(id)
+  setSelectedTest:(id) => quizActions.setSelectedTest(id),
+  chooseQuestion: (index) => quizActions.chooseQuestion((index)),
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Quiz);

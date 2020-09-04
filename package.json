@@ -47,7 +47,10 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0",
-    "redux-devtools-extension": "^2.13.8"
+    "redux-devtools-extension": "^2.13.8",
+    "react-compound-timer": "^1.2.0",
+    "react-beforeunload": "^2.2.4",
+    "react-router": "^5.2.0"
   },
   "browserslist": {
     "production": [

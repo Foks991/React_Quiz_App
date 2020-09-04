@@ -9,6 +9,8 @@ import html from '../../../images/html.svg'
 import css from '../../../images/css.svg'
 import react from '../../../images/react.svg'
 
+const imgs = { html, css, react };
+
 const Quizzes = ({allQuizzes, setSelectedTest}) => {
   const history = useHistory();
 
@@ -20,16 +22,16 @@ const Quizzes = ({allQuizzes, setSelectedTest}) => {
         id={allQuizzes[item].id}
         onClick={(e) => {
           const quizId = e.target.id;
-          setSelectedTest(allQuizzes[quizId]);
+          const selectedQuiz = {...allQuizzes[quizId]};
+          setSelectedTest(selectedQuiz);
           setQuizToStorage(quizId);
           history.push({pathname: `/${camelToKebab(quizId)}`});
         }}
         >
           {allQuizzes[item].quizTitle}
-        <img src={`images/${allQuizzes[item].img}.svg`} alt=""/>
+        <img src={ imgs[allQuizzes[item].img] } alt=""/>
         </div>
-      }
-    )}
+      })}
   </div>)
 };
 

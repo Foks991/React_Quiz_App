@@ -13,7 +13,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import rootSaga from './store/rootSaga';
 import { Provider } from 'react-redux';
-
+import { Beforeunload } from 'react-beforeunload';
 const root = document.getElementById('root');
 
 const sagaMiddleware = createSagaMiddleware();
@@ -23,7 +23,9 @@ sagaMiddleware.run(rootSaga);
 import { camelToKebab } from "./helpers/textFormatter";
 
 const quizzesRoutes = Object.keys(store.getState().quiz.allQuizzes).map((el, index) =>(
-  <Route key={el + index} path={`/${camelToKebab(el)}`} component={Quiz}/>
+  <Beforeunload key={el + index} onBeforeunload={() => ""}>
+    <Route path={`/${camelToKebab(el)}`} component={Quiz}/>
+  </Beforeunload>
 ));
 
 

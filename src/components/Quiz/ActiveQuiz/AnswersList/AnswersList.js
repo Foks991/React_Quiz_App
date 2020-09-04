@@ -14,11 +14,11 @@ const AnswerList = ({ answers, selectedQuizQuestions, activeQuestion, answerLabe
       {answers.map((answer, index) =>
         (
           <li
-            className={selectedQuizQuestions[activeQuestion].selectedAnswer - 1 === index ? 'answer-list-item active-item' : 'answer-list-item'}
+            className={selectedQuizQuestions[activeQuestion].selectedAnswer - 1 === index
+              ? 'answer-list-item active-item'
+              : 'answer-list-item'}
             key={index}
-            onClick={() => {
-              setSelectedAnswer(selectedQuizQuestions[activeQuestion].id, answer.id);
-            }}
+            onClick={() => setSelectedAnswer(selectedQuizQuestions[activeQuestion].id, answer.id)}
           >
             <span className={'answerLabel'}>{answerLabels[index]}</span>
             {answer.text}
