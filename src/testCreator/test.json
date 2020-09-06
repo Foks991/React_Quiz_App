@@ -1,0 +1,459 @@
+{
+  "vueQuiz": {
+    "id": "vueQuiz",
+    "quizTitle": "Vue Quiz",
+    "questions": [
+      {
+        "correctAnswers": [
+          4
+        ],
+        "question": "Which of the following is not represent the non mutating methods?",
+        "answers": [
+          {
+            "text": "Slice()",
+            "id": 1
+          },
+          {
+            "text": "Filter()",
+            "id": 2
+          },
+          {
+            "text": "Concat()",
+            "id": 3
+          },
+          {
+            "text": "Reverse()",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 0
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "What is the short form of v-bind?",
+        "answers": [
+          {
+            "text": ";",
+            "id": 1
+          },
+          {
+            "text": "bind",
+            "id": 2
+          },
+          {
+            "text": ":",
+            "id": 3
+          },
+          {
+            "text": "No short form",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 1
+      },
+      {
+        "correctAnswers": [
+          4
+        ],
+        "question": "Which directive is to used to attach event listeners that invoke methods?",
+        "answers": [
+          {
+            "text": "v-model",
+            "id": 1
+          },
+          {
+            "text": "v-bind",
+            "id": 2
+          },
+          {
+            "text": "v-for",
+            "id": 3
+          },
+          {
+            "text": "v-on",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 2
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "In how many way we can define filter in vue.js?",
+        "answers": [
+          {
+            "text": "1",
+            "id": 1
+          },
+          {
+            "text": "4",
+            "id": 2
+          },
+          {
+            "text": "3",
+            "id": 3
+          },
+          {
+            "text": "2",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 3
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "What is the full form of MVVM?",
+        "answers": [
+          {
+            "text": " Model-View-ValueModel",
+            "id": 1
+          },
+          {
+            "text": " Model-View-ViewModel",
+            "id": 2
+          },
+          {
+            "text": " Model-Value-ValueModel",
+            "id": 3
+          },
+          {
+            "text": " Module-View-ViewModel",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 4
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "Which directive is used for makes two-way binding ?",
+        "answers": [
+          {
+            "text": "no one",
+            "id": 1
+          },
+          {
+            "text": "v-inline",
+            "id": 2
+          },
+          {
+            "text": "v-model",
+            "id": 3
+          },
+          {
+            "text": "v-on",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 5
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "Which of the following is not related to mutation methods?",
+        "answers": [
+          {
+            "text": "Filter()",
+            "id": 1
+          },
+          {
+            "text": "Splice()",
+            "id": 2
+          },
+          {
+            "text": "Pop()",
+            "id": 3
+          },
+          {
+            "text": "Push()",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 6
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "How to Install the vue cli globally?",
+        "answers": [
+          {
+            "text": "npm install vue-cli",
+            "id": 1
+          },
+          {
+            "text": "npm install -g vue-cli",
+            "id": 2
+          },
+          {
+            "text": "npm install vue-cli -global",
+            "id": 3
+          },
+          {
+            "text": "npm install vue-cli -g",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 7
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": " npm install vue-cli -g",
+        "answers": [
+          {
+            "text": ".passive",
+            "id": 1
+          },
+          {
+            "text": ".once",
+            "id": 2
+          },
+          {
+            "text": ".capture",
+            "id": 3
+          },
+          {
+            "text": ".esc",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 8
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "How many types of directive available in vue.js?",
+        "answers": [
+          {
+            "text": "7",
+            "id": 1
+          },
+          {
+            "text": "6",
+            "id": 2
+          },
+          {
+            "text": "4",
+            "id": 3
+          },
+          {
+            "text": "2",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 9
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "v-show doest not support the <template> element?",
+        "answers": [
+          {
+            "text": "False",
+            "id": 1
+          },
+          {
+            "text": "True",
+            "id": 2
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 10
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "When a View Model is destroyed, all event listeners are automatically removed?",
+        "answers": [
+          {
+            "text": "True",
+            "id": 1
+          },
+          {
+            "text": "False",
+            "id": 2
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 11
+      },
+      {
+        "correctAnswers": [],
+        "question": "What is the correct way to create new instance in vue.js?",
+        "answers": [
+          {
+            "text": "var text = new Vue({ // options })",
+            "id": 1
+          },
+          {
+            "text": "var text = new vue(){ // options }",
+            "id": 2
+          },
+          {
+            "text": "var text = new text({ // options })",
+            "id": 3
+          },
+          {
+            "text": "var text = new object({ // options })",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 12
+      },
+      {
+        "correctAnswers": [
+          4
+        ],
+        "question": "How to represent filter in vue.js?",
+        "answers": [
+          {
+            "text": "::",
+            "id": 1
+          },
+          {
+            "text": "!",
+            "id": 2
+          },
+          {
+            "text": "||",
+            "id": 3
+          },
+          {
+            "text": "|",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 13
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "How to represent filter in vue.js?",
+        "answers": [
+          {
+            "text": "vFor",
+            "id": 1
+          },
+          {
+            "text": "v-for",
+            "id": 2
+          },
+          {
+            "text": "*ngFor",
+            "id": 3
+          },
+          {
+            "text": "&v-for",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 14
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "How is the main Author of Vuejs?",
+        "answers": [
+          {
+            "text": "Evan You",
+            "id": 1
+          },
+          {
+            "text": "Tim",
+            "id": 2
+          },
+          {
+            "text": "Rasmus Lerdorf",
+            "id": 3
+          },
+          {
+            "text": "Brendan Eich",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 15
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "If we want to perform the click event only for one time.Which event modifier will be used?",
+        "answers": [
+          {
+            "text": "<a @:click.prevent-once=\"dotask\"></a>",
+            "id": 1
+          },
+          {
+            "text": "<a @:click.passive=\"dotask\"></a>",
+            "id": 2
+          },
+          {
+            "text": "<a @:click.stop=\"dotask\"></a>",
+            "id": 3
+          },
+          {
+            "text": "<a @:click.once=\"dotask\"></a>",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 16
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "Which is used to Dynamically bind one or more attributes, or a component property to an expression?",
+        "answers": [
+          {
+            "text": "v-once directive,",
+            "id": 1
+          },
+          {
+            "text": "v-bind",
+            "id": 2
+          },
+          {
+            "text": "v-pre",
+            "id": 3
+          },
+          {
+            "text": "v-html",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 17
+      }
+    ],
+    "img": "vue"
+  }
+}

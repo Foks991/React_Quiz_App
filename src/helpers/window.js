@@ -1,0 +1,2 @@
+export const reloadPageListener = () => window.addEventListener('beforeunload', e => e.returnValue = '');
+export const reloadPageListenerRemove = () => window.removeEventListener('beforeunload', e => e.returnValue = '');

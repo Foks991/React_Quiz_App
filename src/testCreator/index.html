@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 class="title">Test Object</h1>
+<div class="inputs-block">
+
+    <label for="quizName">Quiz name</label><input id="quizName" type="text">
+    <label for="quizTitle">Quiz title</label><input id="quizTitle" type="text">
+
+    <div class="answers-block">
+        <label for="question">Question</label><input class="question" id="question" type="text">
+
+        <label for="answer1">Answer 1</label><input class="question answers" id="answer1" type="text">
+        <label for="answer2">Answer 2</label><input class="question answers" id="answer2" type="text">
+        <label for="answer3">Answer 3</label><input class="question answers" id="answer3" type="text">
+        <label for="answer4">Answer 4</label><input class="question answers" id="answer4" type="text">
+        <label for="answer5">Answer 5</label><input class="question answers" id="answer5" type="text">
+
+        <label for="correctAnswersArr">Correct Answers Array</label><input class="question" id="correctAnswersArr" type="text">
+
+        <button class="btn" id="createObjectTest">Add Question</button>
+    </div>
+
+</div>
+<button class="btn" id="createTest">Create Quiz</button>
+<label for="textArea">Quiz</label><textarea id="textArea" cols="30" rows="20">Quiz</textarea>
+<script src="createtest.js"></script>
+</body>
+</html>
