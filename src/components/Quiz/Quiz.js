@@ -6,37 +6,36 @@ import ActiveQuiz from "./ActiveQuiz/ActiveQuiz";
 import { quizActions } from "../../store/actions/quizActions";
 import Navigation from "./Navigation/Navigation";
 import { getQuizFromStorage } from "../../sessionStorage/quiz";
-import { useHistory } from 'react-router-dom'
+import { reloadPageListener } from "../../helpers/window";
 import {
-  getActiveQuestion, getAllQuizzes,
+  getActiveQuestion,
+  getAllQuizzes,
   getSelectedQuiz,
-  getSelectedQuizQuestions
+  getSelectedQuizQuestions,
 } from "../../store/rootReducer";
 
 const Quiz = ({ selectedQuizQuestions, activeQuestion, allQuizzes, setSelectedTest, history, chooseQuestion }) => {
+  const currentUrl = history.location.pathname;
+  const alertForwardButton = () =>{
+    const result = confirm('You will lose your progress. Do you really want to leave? ');
+    result ? history.push({pathname: `/`}) : history.push({pathname: currentUrl});
+    window.removeEventListener("popstate", alertForwardButton);
+  };
 
-
+  reloadPageListener();
 
   useEffect(() => {
     const quizId = getQuizFromStorage();
     const selectedQuiz = {...allQuizzes[quizId]};
     chooseQuestion(0);
     quizId ? setSelectedTest(selectedQuiz) : history.push({pathname: `/`});
-    window.addEventListener("popstate", (e) => {
-      const result = confirm('You will lose your progress. Do you really want to leave? ');
-
-      if(!result){
-        history.push({pathname: `/html-quiz`})
-      }else{
-        history.push({pathname: `/`})
-      }
-    });
+    window.addEventListener("popstate", alertForwardButton);
   },[]);
 
   return (
-
-    selectedQuizQuestions ? <div className={'QuizContainer'}>
+    <div className={'QuizContainer'}>
       <div className={'activeTests'}>
+
         {selectedQuizQuestions.map(item => {
           const {answers, question, id} = item;
 
@@ -51,13 +50,12 @@ const Quiz = ({ selectedQuizQuestions, activeQuestion, allQuizzes, setSelectedTe
 
         <Buttons/>
         <Result/>
-
       </div>
 
       <div className={'navigation'}>
         <Navigation/>
       </div>
-    </div> : null
+    </div>
   )
 };
 

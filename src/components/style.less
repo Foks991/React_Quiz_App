@@ -13,7 +13,10 @@
 @import "Quiz/Result/result";
 
 @import "Main/Main";
-@import "Main/Quizzes/Quizzes";
+@import "Main/QuizList/QuizList";
+@import "Main/Header/Header";
+@import "Main/Description/Description";
+@import "Main/Description/Step/Step";
 
 *{
   margin: 0;
@@ -24,24 +27,22 @@
 
 body{
   height: 100vh;
-  width: 100vw;
   background-image: linear-gradient(#003973, #E5E5BE);
   display: flex;
   align-items: center;
 }
 
 .container{
-  width: 1300px;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
+
 }
 
 .QuizContainer{
   width: 100%;
-  height: 90%;
+  height: 100%;
   display: flex;
 }
 
@@ -54,6 +55,7 @@ body{
   }
   .QuizContainer{
     flex-direction: column;
+    height: 100vh;
   }
   .activeTests{
     width: 100%;

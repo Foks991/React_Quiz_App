@@ -50,7 +50,9 @@
     "redux-devtools-extension": "^2.13.8",
     "react-compound-timer": "^1.2.0",
     "react-beforeunload": "^2.2.4",
-    "react-router": "^5.2.0"
+    "react-router": "^5.2.0",
+    "url-loader": "^4.1.0",
+    "download-as-file": "^1.1.0"
   },
   "browserslist": {
     "production": [

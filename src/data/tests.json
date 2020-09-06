@@ -1789,5 +1789,2598 @@
       }
     ],
     "img": "react"
+  },
+  "javascriptQuiz": {
+    "id": "javascriptQuiz",
+    "quizTitle": "Javascript Quiz",
+    "questions": [
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "Inside which HTML element do we put the JavaScript?",
+        "answers": [
+          {
+            "text": "<script>",
+            "id": 1
+          },
+          {
+            "text": "<javascript>",
+            "id": 2
+          },
+          {
+            "text": "<scripting>",
+            "id": 3
+          },
+          {
+            "text": "<js>",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 0
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "What is the correct JavaScript syntax to change the content of the HTML element below? <p id=\"demo\">This is a demonstration.</p>",
+        "answers": [
+          {
+            "text": "document.getElementByName(\"p\").innerHTML = \"Hello World!\";",
+            "id": 1
+          },
+          {
+            "text": "#demo.innerHTML = \"Hello World!\";",
+            "id": 2
+          },
+          {
+            "text": "document.getElementById(\"demo\").innerHTML = \"Hello World!\";",
+            "id": 3
+          },
+          {
+            "text": "document.getElement(\"p\").innerHTML = \"Hello World!\";",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 1
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "Where is the correct place to insert a JavaScript?",
+        "answers": [
+          {
+            "text": "The <head> section",
+            "id": 1
+          },
+          {
+            "text": "Both the <head> section and the <body> section are correct",
+            "id": 2
+          },
+          {
+            "text": "The <body> section",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 2
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "What is the correct syntax for referring to an external script called \"xxx.js\"?",
+        "answers": [
+          {
+            "text": "<script src=\"xxx.js\">",
+            "id": 1
+          },
+          {
+            "text": "<script href=\"xxx.js\">",
+            "id": 2
+          },
+          {
+            "text": "<script name=\"xxx.js\">",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 3
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "The external JavaScript file must contain the <script> tag.",
+        "answers": [
+          {
+            "text": "False",
+            "id": 1
+          },
+          {
+            "text": "True",
+            "id": 2
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 4
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "How do you write \"Hello World\" in an alert box?",
+        "answers": [
+          {
+            "text": "msg(\"Hello World\");",
+            "id": 1
+          },
+          {
+            "text": "alert(\"Hello World\");",
+            "id": 2
+          },
+          {
+            "text": "msgBox(\"Hello World\");",
+            "id": 3
+          },
+          {
+            "text": "alertBox(\"Hello World\");",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 5
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "How do you create a function in JavaScript?",
+        "answers": [
+          {
+            "text": "function = myFunction()",
+            "id": 1
+          },
+          {
+            "text": "function myFunction()",
+            "id": 2
+          },
+          {
+            "text": "function:myFunction()",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 6
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "How do you call a function named \"myFunction\"?",
+        "answers": [
+          {
+            "text": "call function myFunction()",
+            "id": 1
+          },
+          {
+            "text": "call myFunction()",
+            "id": 2
+          },
+          {
+            "text": "myFunction()",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 7
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "How to write an IF statement in JavaScript?",
+        "answers": [
+          {
+            "text": "if (i == 5)",
+            "id": 1
+          },
+          {
+            "text": "if i == 5 then",
+            "id": 2
+          },
+          {
+            "text": "if i = 5",
+            "id": 3
+          },
+          {
+            "text": "if i = 5 then",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 8
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "How to write an IF statement for executing some code if \"i\" is NOT equal to 5?",
+        "answers": [
+          {
+            "text": "if (i != 5)",
+            "id": 1
+          },
+          {
+            "text": "if i =! 5 then",
+            "id": 2
+          },
+          {
+            "text": "if i <> 5",
+            "id": 3
+          },
+          {
+            "text": "if (i <> 5)",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 9
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "How does a WHILE loop start?",
+        "answers": [
+          {
+            "text": "while (i <= 10)",
+            "id": 1
+          },
+          {
+            "text": "while i = 1 to 10",
+            "id": 2
+          },
+          {
+            "text": "while (i <= 10; i++)",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 10
+      },
+      {
+        "correctAnswers": [
+          4
+        ],
+        "question": "How does a FOR loop start?",
+        "answers": [
+          {
+            "text": "for i = 1 to 5",
+            "id": 1
+          },
+          {
+            "text": "for (i = 0; i <= 5)",
+            "id": 2
+          },
+          {
+            "text": "for (i <= 5; i++)",
+            "id": 3
+          },
+          {
+            "text": "for (i = 0; i <= 5; i++)",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 11
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "How can you add a comment in a JavaScript?",
+        "answers": [
+          {
+            "text": "<!--This is a comment-->",
+            "id": 1
+          },
+          {
+            "text": "//This is a comment",
+            "id": 2
+          },
+          {
+            "text": "'This is a comment",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 12
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "How to insert a comment that has more than one line?",
+        "answers": [
+          {
+            "text": "<!--This comment has more than one line-->",
+            "id": 1
+          },
+          {
+            "text": "/This comment has more than one line//",
+            "id": 2
+          },
+          {
+            "text": "/*This comment has more than one line*/",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 13
+      },
+      {
+        "correctAnswers": [
+          4
+        ],
+        "question": "What is the correct way to write a JavaScript array?",
+        "answers": [
+          {
+            "text": "const colors = 1 = (\"red\"), 2 = (\"green\"), 3 = (\"blue\")",
+            "id": 1
+          },
+          {
+            "text": "const colors = (1:\"red\", 2:\"green\", 3:\"blue\")",
+            "id": 2
+          },
+          {
+            "text": "const colors = \"red\", \"green\", \"blue\"",
+            "id": 3
+          },
+          {
+            "text": "const colors = [\"red\", \"green\", \"blue\"]",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 14
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "How do you round the number 7.25, to the nearest integer?",
+        "answers": [
+          {
+            "text": "round(7.25)",
+            "id": 1
+          },
+          {
+            "text": "Math.round(7.25)",
+            "id": 2
+          },
+          {
+            "text": "rnd(7.25)",
+            "id": 3
+          },
+          {
+            "text": "Math.rnd(7.25)",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 15
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "How do you find the number with the highest value of x and y?",
+        "answers": [
+          {
+            "text": "Math.max(x, y)",
+            "id": 1
+          },
+          {
+            "text": "Math.ceil(x, y)",
+            "id": 2
+          },
+          {
+            "text": "ceil(x, y)",
+            "id": 3
+          },
+          {
+            "text": "top(x, y)",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 16
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "JavaScript is the same as Java.",
+        "answers": [
+          {
+            "text": "False",
+            "id": 1
+          },
+          {
+            "text": "True",
+            "id": 2
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 17
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "How can you detect the client's browser name?",
+        "answers": [
+          {
+            "text": "client.navName",
+            "id": 1
+          },
+          {
+            "text": "browser.name",
+            "id": 2
+          },
+          {
+            "text": "navigator.appName",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 18
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "Which event occurs when the user clicks on an HTML element?",
+        "answers": [
+          {
+            "text": "onEventClick",
+            "id": 1
+          },
+          {
+            "text": "onchange",
+            "id": 2
+          },
+          {
+            "text": "onclick  ",
+            "id": 3
+          },
+          {
+            "text": "onmouseover",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 19
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "How do you declare a JavaScript variable?",
+        "answers": [
+          {
+            "text": "v carName;",
+            "id": 1
+          },
+          {
+            "text": "const carName;",
+            "id": 2
+          },
+          {
+            "text": "variable carName;",
+            "id": 3
+          },
+          {
+            "text": "c carName;",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 20
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "Which operator is used to assign a value to a variable?",
+        "answers": [
+          {
+            "text": "=",
+            "id": 1
+          },
+          {
+            "text": "-",
+            "id": 2
+          },
+          {
+            "text": "x",
+            "id": 3
+          },
+          {
+            "text": "*",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 21
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "What will the following code return: Boolean(10 > 9)",
+        "answers": [
+          {
+            "text": "NaN",
+            "id": 1
+          },
+          {
+            "text": "true",
+            "id": 2
+          },
+          {
+            "text": "false",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 22
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "Is JavaScript case-sensitive?",
+        "answers": [
+          {
+            "text": "Yes",
+            "id": 1
+          },
+          {
+            "text": "No",
+            "id": 2
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 23
+      }
+    ],
+    "img": "javascript"
+  },
+  "typescriptQuiz": {
+    "id": "typescriptQuiz",
+    "quizTitle": "Typescript Quiz",
+    "questions": [
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "TypeScript is an ____________ framework.",
+        "answers": [
+          {
+            "text": "Licensed",
+            "id": 1
+          },
+          {
+            "text": "Open-sourced",
+            "id": 2
+          },
+          {
+            "text": "Commercial",
+            "id": 3
+          },
+          {
+            "text": "Both, A and B",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 0
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "TypeScript is a typed superset of __________.",
+        "answers": [
+          {
+            "text": "C#",
+            "id": 1
+          },
+          {
+            "text": "Java",
+            "id": 2
+          },
+          {
+            "text": "JavaScript",
+            "id": 3
+          },
+          {
+            "text": "ReactJS",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 1
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "TypeScript file compiled into ________.",
+        "answers": [
+          {
+            "text": "JavaScript",
+            "id": 1
+          },
+          {
+            "text": "VBScript",
+            "id": 2
+          },
+          {
+            "text": "TypeScript",
+            "id": 3
+          },
+          {
+            "text": "None of the above",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 2
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "TypeScript can be used to write server side and client side application.",
+        "answers": [
+          {
+            "text": "True",
+            "id": 1
+          },
+          {
+            "text": "False",
+            "id": 2
+          },
+          {
+            "text": "Not applicable",
+            "id": 3
+          },
+          {
+            "text": "None of the above",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 3
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "_______ command is used to generate a JavaScript file from a TypeScript file.",
+        "answers": [
+          {
+            "text": "npm filename.ts",
+            "id": 1
+          },
+          {
+            "text": "tsc fileName.ts",
+            "id": 2
+          },
+          {
+            "text": "tsc -js fileName.ts",
+            "id": 3
+          },
+          {
+            "text": "All of the above",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 4
+      },
+      {
+        "correctAnswers": [
+          4
+        ],
+        "question": "Which of the following statement declares a variable in TypeScript?",
+        "answers": [
+          {
+            "text": "var myVar = 123;",
+            "id": 1
+          },
+          {
+            "text": "var myVar:number = 123;",
+            "id": 2
+          },
+          {
+            "text": "let myVar:number = 123;",
+            "id": 3
+          },
+          {
+            "text": "All of the above",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 5
+      },
+      {
+        "correctAnswers": [
+          4
+        ],
+        "question": "Which of the followings are primitive types supported in TypeScript?",
+        "answers": [
+          {
+            "text": "number",
+            "id": 1
+          },
+          {
+            "text": "string",
+            "id": 2
+          },
+          {
+            "text": "boolean",
+            "id": 3
+          },
+          {
+            "text": "All of the above",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 6
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "Which of the following is a valid union type variable?",
+        "answers": [
+          {
+            "text": "var emp:[number, string] = [1, \"Steve\"];",
+            "id": 1
+          },
+          {
+            "text": "var emp:(number|string) = 123;",
+            "id": 2
+          },
+          {
+            "text": "var emp:string[] = [\"Bill\"]",
+            "id": 3
+          },
+          {
+            "text": "None of the above",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 7
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "Which of the following is a valid tuple?",
+        "answers": [
+          {
+            "text": "var employee:[number, string] = [1, \"Bill\"]",
+            "id": 1
+          },
+          {
+            "text": "var employee:(number|string) = 123;",
+            "id": 2
+          },
+          {
+            "text": "var employee = [1, \"Bill\"];",
+            "id": 3
+          },
+          {
+            "text": "None of the above",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 8
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "Type assertion in TypeScript is achieved using which of the following syntax?",
+        "answers": [
+          {
+            "text": "Using <type> syntax",
+            "id": 1
+          },
+          {
+            "text": "Using as syntax",
+            "id": 2
+          },
+          {
+            "text": "Both A and B",
+            "id": 3
+          },
+          {
+            "text": "None of the above",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 9
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "What will be the output of the following code snippet?   let arr = [10, 20, 30, 40]; for(var val of arr) { console.log(val) }",
+        "answers": [
+          {
+            "text": "prints 10, 20, 30, 40",
+            "id": 1
+          },
+          {
+            "text": "prints 0, 1, 2, 3",
+            "id": 2
+          },
+          {
+            "text": "prints undefined",
+            "id": 3
+          },
+          {
+            "text": "Compiler error",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 10
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "Which of the following is a valid arrow function?",
+        "answers": [
+          {
+            "text": "let sum = (x: number, y: number) => x + y;",
+            "id": 1
+          },
+          {
+            "text": "let sum(): (x: number, y: number):number => x + y;",
+            "id": 2
+          },
+          {
+            "text": "let sum = (x: number, y: number) => return x + y;",
+            "id": 3
+          },
+          {
+            "text": "let sum:(x: number, y: number) => x + y;",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 11
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "The rest parameters in a function is used when _______.",
+        "answers": [
+          {
+            "text": "The types of parameters is not known",
+            "id": 1
+          },
+          {
+            "text": "The number of parameters is not known",
+            "id": 2
+          },
+          {
+            "text": "The function needs to be executed asynchronously",
+            "id": 3
+          },
+          {
+            "text": "The function is called recursively",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 12
+      },
+      {
+        "correctAnswers": [
+          4
+        ],
+        "question": "Which of the following statement is TRUE?",
+        "answers": [
+          {
+            "text": "An interface can extend another interface in TypeScript.",
+            "id": 1
+          },
+          {
+            "text": "An interface can extend a class in TypeScript.",
+            "id": 2
+          },
+          {
+            "text": "TypeScript interface does not generate any JavaScript code.",
+            "id": 3
+          },
+          {
+            "text": "All of the above",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 13
+      },
+      {
+        "correctAnswers": [
+          4
+        ],
+        "question": "Which of the following are valid data modifiers in TypeScript?",
+        "answers": [
+          {
+            "text": "public",
+            "id": 1
+          },
+          {
+            "text": "private",
+            "id": 2
+          },
+          {
+            "text": "protected",
+            "id": 3
+          },
+          {
+            "text": "All of the above",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 14
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "Which of the following keyword is used to declare a module?",
+        "answers": [
+          {
+            "text": "export",
+            "id": 1
+          },
+          {
+            "text": "namespace",
+            "id": 2
+          },
+          {
+            "text": "type",
+            "id": 3
+          },
+          {
+            "text": "declare",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 15
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "Which of the followings is declared a namespace?",
+        "answers": [
+          {
+            "text": "namespace test{ }",
+            "id": 1
+          },
+          {
+            "text": "ns test { }",
+            "id": 2
+          },
+          {
+            "text": "A & B both",
+            "id": 3
+          },
+          {
+            "text": "export test(){ }",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 16
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "Which of the following command is used to compile a module?",
+        "answers": [
+          {
+            "text": "tsc --module amd mymodule.ts",
+            "id": 1
+          },
+          {
+            "text": "tsc -m amd mymodule.ts",
+            "id": 2
+          },
+          {
+            "text": "Both, A and B",
+            "id": 3
+          },
+          {
+            "text": "None of the above",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 17
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "Which configuration file is required to compile the whole TypeScript project?",
+        "answers": [
+          {
+            "text": "tsconfig.js",
+            "id": 1
+          },
+          {
+            "text": "tsconfig.json",
+            "id": 2
+          },
+          {
+            "text": "web.config",
+            "id": 3
+          },
+          {
+            "text": "app.json",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 18
+      },
+      {
+        "correctAnswers": [
+          4
+        ],
+        "question": "Which of the following statement is TRUE?",
+        "answers": [
+          {
+            "text": "TypeScript supports generics.",
+            "id": 1
+          },
+          {
+            "text": "TypeScript supports readonly and static members.",
+            "id": 2
+          },
+          {
+            "text": "TypeScript supports abstract class.",
+            "id": 3
+          },
+          {
+            "text": "All of the above.",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 19
+      }
+    ],
+    "img": "typescript"
+  },
+  "sqlQuiz": {
+    "id": "sqlQuiz",
+    "quizTitle": "Sql Quiz",
+    "questions": [
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "What does SQL stand for?",
+        "answers": [
+          {
+            "text": "Structured Query Language  ",
+            "id": 1
+          },
+          {
+            "text": "Structured Question Language",
+            "id": 2
+          },
+          {
+            "text": "Strong Question Language",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 0
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "Strong Question Language",
+        "answers": [
+          {
+            "text": "GET",
+            "id": 1
+          },
+          {
+            "text": "EXTRACT",
+            "id": 2
+          },
+          {
+            "text": "SELECT",
+            "id": 3
+          },
+          {
+            "text": "OPEN",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 1
+      },
+      {
+        "correctAnswers": [
+          4
+        ],
+        "question": "Which SQL statement is used to update data in a database?",
+        "answers": [
+          {
+            "text": "SAVE AS",
+            "id": 1
+          },
+          {
+            "text": "MODIFY",
+            "id": 2
+          },
+          {
+            "text": "SAVE",
+            "id": 3
+          },
+          {
+            "text": "UPDATE",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 2
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "Which SQL statement is used to delete data from a database?",
+        "answers": [
+          {
+            "text": "REMOVE",
+            "id": 1
+          },
+          {
+            "text": "COLLAPSE",
+            "id": 2
+          },
+          {
+            "text": "DELETE",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 3
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "Which SQL statement is used to insert new data in a database?",
+        "answers": [
+          {
+            "text": "ADD NEW",
+            "id": 1
+          },
+          {
+            "text": "INSERT INTO",
+            "id": 2
+          },
+          {
+            "text": "ADD RECORD",
+            "id": 3
+          },
+          {
+            "text": "INSERT NEW",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 4
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "With SQL, how do you select a column named \"FirstName\" from a table named \"Persons\"?",
+        "answers": [
+          {
+            "text": "EXTRACT FirstName FROM Persons",
+            "id": 1
+          },
+          {
+            "text": "SELECT Persons.FirstName",
+            "id": 2
+          },
+          {
+            "text": "SELECT FirstName FROM Persons",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 5
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "With SQL, how do you select all the columns from a table named \"Persons\"?",
+        "answers": [
+          {
+            "text": "SELECT *.Persons",
+            "id": 1
+          },
+          {
+            "text": "SELECT Persons",
+            "id": 2
+          },
+          {
+            "text": "SELECT * FROM Persons  ",
+            "id": 3
+          },
+          {
+            "text": "SELECT [all] FROM Persons",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 6
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "With SQL, how do you select all the records from a table named \"Persons\" where the value of the column \"FirstName\" is \"Peter\"?",
+        "answers": [
+          {
+            "text": "SELECT * FROM Persons WHERE FirstName='Peter'  ",
+            "id": 1
+          },
+          {
+            "text": "SELECT * FROM Persons WHERE FirstName<>'Peter'",
+            "id": 2
+          },
+          {
+            "text": "SELECT [all] FROM Persons WHERE FirstName='Peter'",
+            "id": 3
+          },
+          {
+            "text": "SELECT [all] FROM Persons WHERE FirstName LIKE 'Peter'",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 7
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "With SQL, how do you select all the records from a table named \"Persons\" where the value of the column \"FirstName\" starts with an \"a\"?",
+        "answers": [
+          {
+            "text": "SELECT * FROM Persons WHERE FirstName='%a%'",
+            "id": 1
+          },
+          {
+            "text": "SELECT * FROM Persons WHERE FirstName='a'",
+            "id": 2
+          },
+          {
+            "text": "SELECT * FROM Persons WHERE FirstName LIKE 'a%'  ",
+            "id": 3
+          },
+          {
+            "text": "SELECT * FROM Persons WHERE FirstName LIKE '%a'",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 8
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "The OR operator displays a record if ANY conditions listed are true. The AND operator displays a record if ALL of the conditions listed are true",
+        "answers": [
+          {
+            "text": "False",
+            "id": 1
+          },
+          {
+            "text": "True",
+            "id": 2
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 9
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "With SQL, how do you select all the records from a table named \"Persons\" where the \"FirstName\" is \"Peter\" and the \"LastName\" is \"Jackson\"?",
+        "answers": [
+          {
+            "text": "SELECT * FROM Persons WHERE FirstName<>'Peter' AND LastName<>'Jackson'",
+            "id": 1
+          },
+          {
+            "text": "SELECT FirstName='Peter', LastName='Jackson' FROM Persons",
+            "id": 2
+          },
+          {
+            "text": "SELECT * FROM Persons WHERE FirstName='Peter' AND LastName='Jackson'",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 10
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "With SQL, how do you select all the records from a table named \"Persons\" where the \"LastName\" is alphabetically between (and including) \"Hansen\" and \"Pettersen\"?",
+        "answers": [
+          {
+            "text": "SELECT * FROM Persons WHERE LastName BETWEEN 'Hansen' AND 'Pettersen'  ",
+            "id": 1
+          },
+          {
+            "text": "SELECT LastName>'Hansen' AND LastName<'Pettersen' FROM Persons",
+            "id": 2
+          },
+          {
+            "text": "SELECT * FROM Persons WHERE LastName>'Hansen' AND LastName<'Pettersen'",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 11
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "Which SQL statement is used to return only different values?",
+        "answers": [
+          {
+            "text": "SELECT DISTINCT",
+            "id": 1
+          },
+          {
+            "text": "SELECT DIFFERENT",
+            "id": 2
+          },
+          {
+            "text": "SELECT UNIQUE",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 12
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "Which SQL keyword is used to sort the result-set?",
+        "answers": [
+          {
+            "text": "ORDER",
+            "id": 1
+          },
+          {
+            "text": "SORT",
+            "id": 2
+          },
+          {
+            "text": "ORDER BY",
+            "id": 3
+          },
+          {
+            "text": "SORT BY",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 13
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "With SQL, how can you return all the records from a table named \"Persons\" sorted descending by \"FirstName\"?",
+        "answers": [
+          {
+            "text": "SELECT * FROM Persons ORDER FirstName DESC",
+            "id": 1
+          },
+          {
+            "text": "SELECT * FROM Persons ORDER BY FirstName DESC",
+            "id": 2
+          },
+          {
+            "text": "SELECT * FROM Persons SORT 'FirstName' DESC",
+            "id": 3
+          },
+          {
+            "text": "SELECT * FROM Persons SORT BY 'FirstName' DESC",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 14
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "With SQL, how can you insert a new record into the \"Persons\" table?",
+        "answers": [
+          {
+            "text": "INSERT VALUES ('Jimmy', 'Jackson') INTO Persons",
+            "id": 1
+          },
+          {
+            "text": "INSERT INTO Persons VALUES ('Jimmy', 'Jackson')  ",
+            "id": 2
+          },
+          {
+            "text": "INSERT ('Jimmy', 'Jackson') INTO Persons",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 15
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "With SQL, how can you insert \"Olsen\" as the \"LastName\" in the \"Persons\" table?",
+        "answers": [
+          {
+            "text": "INSERT ('Olsen') INTO Persons (LastName)",
+            "id": 1
+          },
+          {
+            "text": "INSERT INTO Persons (LastName) VALUES ('Olsen')  ",
+            "id": 2
+          },
+          {
+            "text": "INSERT INTO Persons ('Olsen') INTO LastName",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 16
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "How can you change \"Hansen\" into \"Nilsen\" in the \"LastName\" column in the Persons table?",
+        "answers": [
+          {
+            "text": "UPDATE Persons SET LastName='Hansen' INTO LastName='Nilsen'  ",
+            "id": 1
+          },
+          {
+            "text": "MODIFY Persons SET LastName='Hansen' INTO LastName='Nilsen",
+            "id": 2
+          },
+          {
+            "text": "UPDATE Persons SET LastName='Nilsen' WHERE LastName='Hansen'",
+            "id": 3
+          },
+          {
+            "text": "MODIFY Persons SET LastName='Nilsen' WHERE LastName='Hansen'",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 17
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "With SQL, how can you delete the records where the \"FirstName\" is \"Peter\" in the Persons Table?",
+        "answers": [
+          {
+            "text": "DELETE FirstName='Peter' FROM Persons",
+            "id": 1
+          },
+          {
+            "text": "DELETE FROM Persons WHERE FirstName = 'Peter'  ",
+            "id": 2
+          },
+          {
+            "text": "DELETE ROW FirstName='Peter' FROM Persons",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 18
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "With SQL, how can you return the number of records in the \"Persons\" table?",
+        "answers": [
+          {
+            "text": "SELECT LEN(*) FROM Persons",
+            "id": 1
+          },
+          {
+            "text": "SELECT COUNT(*) FROM Persons",
+            "id": 2
+          },
+          {
+            "text": "SELECT COLUMNS(*) FROM Persons",
+            "id": 3
+          },
+          {
+            "text": "SELECT NO(*) FROM Persons",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 19
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "What is the most common type of join?",
+        "answers": [
+          {
+            "text": "INSIDE JOIN",
+            "id": 1
+          },
+          {
+            "text": "JOINED",
+            "id": 2
+          },
+          {
+            "text": "INNER JOIN",
+            "id": 3
+          },
+          {
+            "text": "JOINED TABLE",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 20
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "Which operator is used to select values within a range?",
+        "answers": [
+          {
+            "text": "WITHIN",
+            "id": 1
+          },
+          {
+            "text": "RANGE",
+            "id": 2
+          },
+          {
+            "text": "BETWEEN",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 21
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "The NOT NULL constraint enforces a column to not accept NULL values.",
+        "answers": [
+          {
+            "text": "False",
+            "id": 1
+          },
+          {
+            "text": "True    ",
+            "id": 2
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 22
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "Which operator is used to search for a specified pattern in a column?",
+        "answers": [
+          {
+            "text": "LIKE",
+            "id": 1
+          },
+          {
+            "text": "GET",
+            "id": 2
+          },
+          {
+            "text": "FROM",
+            "id": 3
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 23
+      },
+      {
+        "correctAnswers": [
+          4
+        ],
+        "question": "Which SQL statement is used to create a table in a database?",
+        "answers": [
+          {
+            "text": "CREATE DB",
+            "id": 1
+          },
+          {
+            "text": "CREATE DATABASE TAB",
+            "id": 2
+          },
+          {
+            "text": "CREATE DATABASE TABLE",
+            "id": 3
+          },
+          {
+            "text": "CREATE TABLE",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 24
+      }
+    ],
+    "img": "sql"
+  },
+  "gitQuiz": {
+    "id": "gitQuiz",
+    "quizTitle": "Git Quiz",
+    "questions": [
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "What's the git command that downloads your repository from GitHub to your computer?",
+        "answers": [
+          {
+            "text": "git push",
+            "id": 1
+          },
+          {
+            "text": "git fork",
+            "id": 2
+          },
+          {
+            "text": "git clone",
+            "id": 3
+          },
+          {
+            "text": "git commit",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 0
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "How do you create a copy of a lab under your own GitHub account so that you can solve the lab?",
+        "answers": [
+          {
+            "text": "Forking it via the GitHub interface.",
+            "id": 1
+          },
+          {
+            "text": "git fork",
+            "id": 2
+          },
+          {
+            "text": "git clone",
+            "id": 3
+          },
+          {
+            "text": "git pull-request",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 1
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "What's the opposite of git clone, instead of downloading your code from GitHub, uploads your changes and code back to GitHub?",
+        "answers": [
+          {
+            "text": "git push",
+            "id": 1
+          },
+          {
+            "text": "git add",
+            "id": 2
+          },
+          {
+            "text": "git upload",
+            "id": 3
+          },
+          {
+            "text": "git status",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 2
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "How do you check the state of your local git repository since your last commit?",
+        "answers": [
+          {
+            "text": "git check",
+            "id": 1
+          },
+          {
+            "text": "git status",
+            "id": 2
+          },
+          {
+            "text": "git commit",
+            "id": 3
+          },
+          {
+            "text": "git diff",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 3
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "How do you stage files for a commit?",
+        "answers": [
+          {
+            "text": "git stage",
+            "id": 1
+          },
+          {
+            "text": "git commit",
+            "id": 2
+          },
+          {
+            "text": "git add",
+            "id": 3
+          },
+          {
+            "text": "git reset",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 4
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "How do you save the current state of your code into the git version control?",
+        "answers": [
+          {
+            "text": "By committing the staged changes with git commit",
+            "id": 1
+          },
+          {
+            "text": "By adding all changes and staging them with git stage",
+            "id": 2
+          },
+          {
+            "text": "By adding all changes and staging them with git add",
+            "id": 3
+          },
+          {
+            "text": "By creating a new commit with git init",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 5
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "What's a shortcut to staging all the changes you have?",
+        "answers": [
+          {
+            "text": "git commit add .",
+            "id": 1
+          },
+          {
+            "text": "git commit .",
+            "id": 2
+          },
+          {
+            "text": "git add .",
+            "id": 3
+          },
+          {
+            "text": "git push -am \"Message\"",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 6
+      },
+      {
+        "correctAnswers": [
+          4
+        ],
+        "question": "How do you supply a commit message to a commit?",
+        "answers": [
+          {
+            "text": "git message \"I'm coding\"",
+            "id": 1
+          },
+          {
+            "text": "git add \"I'm coding\"",
+            "id": 2
+          },
+          {
+            "text": "git commit \"I'm coding\"",
+            "id": 3
+          },
+          {
+            "text": "git commit -m \"I'm coding\"",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 7
+      },
+      {
+        "correctAnswers": [
+          4
+        ],
+        "question": "What is the correct commit syntax for all changes with a message?",
+        "answers": [
+          {
+            "text": "git message -am \"I'm coding\"",
+            "id": 1
+          },
+          {
+            "text": "git add -a \"I'm coding\"",
+            "id": 2
+          },
+          {
+            "text": "git commit -a \"I'm coding\"",
+            "id": 3
+          },
+          {
+            "text": "git commit -am \"I'm coding\"",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 8
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "What comes first, staging with git add . or committing with git commit?",
+        "answers": [
+          {
+            "text": "Staging your commits with git add",
+            "id": 1
+          },
+          {
+            "text": "Committing with git commit",
+            "id": 2
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 9
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "Which command defines the author email to be used for all commits by the current user?",
+        "answers": [
+          {
+            "text": "git clean -f <path>",
+            "id": 1
+          },
+          {
+            "text": "git config --global user.email <email>",
+            "id": 2
+          },
+          {
+            "text": "git merge --no-ff <email>",
+            "id": 3
+          },
+          {
+            "text": "git email--amend",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 10
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "______ removes untracked files from your working directory.",
+        "answers": [
+          {
+            "text": "git commit",
+            "id": 1
+          },
+          {
+            "text": "git clean -f <path>",
+            "id": 2
+          },
+          {
+            "text": "git clean",
+            "id": 3
+          },
+          {
+            "text": "git reset",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 11
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "Which command creates an empty Git repository in the specified directory?",
+        "answers": [
+          {
+            "text": "git reset <file>",
+            "id": 1
+          },
+          {
+            "text": "git log <since>..<until>",
+            "id": 2
+          },
+          {
+            "text": "git init <directory>",
+            "id": 3
+          },
+          {
+            "text": "git init --bare <directory>",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 12
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "Git command to compare two specified branches",
+        "answers": [
+          {
+            "text": "git diff <first-branch>...<second-branch>",
+            "id": 1
+          },
+          {
+            "text": "git merge <fetched-remote-name> <branch-name>",
+            "id": 2
+          },
+          {
+            "text": "git blame -L <start>,<end> <filename>",
+            "id": 3
+          },
+          {
+            "text": "git push <remote> --tags",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 13
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "_____________ command renames the current branch to <branch>",
+        "answers": [
+          {
+            "text": "git remote rm <name>",
+            "id": 1
+          },
+          {
+            "text": "git branch -m <branch>",
+            "id": 2
+          },
+          {
+            "text": "git branch -D <branch> (CAPS)",
+            "id": 3
+          },
+          {
+            "text": "git rebase <base>",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 14
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "What language is used in Git?",
+        "answers": [
+          {
+            "text": "C",
+            "id": 1
+          },
+          {
+            "text": "HTML",
+            "id": 2
+          },
+          {
+            "text": "PHP",
+            "id": 3
+          },
+          {
+            "text": "C++",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 15
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "Git command .................... used to give tags to the specified commit.",
+        "answers": [
+          {
+            "text": "git checkout [branch name]",
+            "id": 1
+          },
+          {
+            "text": "git show [commit]",
+            "id": 2
+          },
+          {
+            "text": "git tag [commitID]",
+            "id": 3
+          },
+          {
+            "text": "git rm [file]",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 16
+      }
+    ],
+    "img": "git"
+  },
+  "vueQuiz": {
+    "id": "vueQuiz",
+    "quizTitle": "Vue Quiz",
+    "questions": [
+      {
+        "correctAnswers": [
+          4
+        ],
+        "question": "Which of the following is not represent the non mutating methods?",
+        "answers": [
+          {
+            "text": "Slice()",
+            "id": 1
+          },
+          {
+            "text": "Filter()",
+            "id": 2
+          },
+          {
+            "text": "Concat()",
+            "id": 3
+          },
+          {
+            "text": "Reverse()",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 0
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "What is the short form of v-bind?",
+        "answers": [
+          {
+            "text": ";",
+            "id": 1
+          },
+          {
+            "text": "bind",
+            "id": 2
+          },
+          {
+            "text": ":",
+            "id": 3
+          },
+          {
+            "text": "No short form",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 1
+      },
+      {
+        "correctAnswers": [
+          4
+        ],
+        "question": "Which directive is to used to attach event listeners that invoke methods?",
+        "answers": [
+          {
+            "text": "v-model",
+            "id": 1
+          },
+          {
+            "text": "v-bind",
+            "id": 2
+          },
+          {
+            "text": "v-for",
+            "id": 3
+          },
+          {
+            "text": "v-on",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 2
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "In how many way we can define filter in vue.js?",
+        "answers": [
+          {
+            "text": "1",
+            "id": 1
+          },
+          {
+            "text": "4",
+            "id": 2
+          },
+          {
+            "text": "3",
+            "id": 3
+          },
+          {
+            "text": "2",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 3
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "What is the full form of MVVM?",
+        "answers": [
+          {
+            "text": " Model-View-ValueModel",
+            "id": 1
+          },
+          {
+            "text": " Model-View-ViewModel",
+            "id": 2
+          },
+          {
+            "text": " Model-Value-ValueModel",
+            "id": 3
+          },
+          {
+            "text": " Module-View-ViewModel",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 4
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "Which directive is used for makes two-way binding ?",
+        "answers": [
+          {
+            "text": "no one",
+            "id": 1
+          },
+          {
+            "text": "v-inline",
+            "id": 2
+          },
+          {
+            "text": "v-model",
+            "id": 3
+          },
+          {
+            "text": "v-on",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 5
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "Which of the following is not related to mutation methods?",
+        "answers": [
+          {
+            "text": "Filter()",
+            "id": 1
+          },
+          {
+            "text": "Splice()",
+            "id": 2
+          },
+          {
+            "text": "Pop()",
+            "id": 3
+          },
+          {
+            "text": "Push()",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 6
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "How to Install the vue cli globally?",
+        "answers": [
+          {
+            "text": "npm install vue-cli",
+            "id": 1
+          },
+          {
+            "text": "npm install -g vue-cli",
+            "id": 2
+          },
+          {
+            "text": "npm install vue-cli -global",
+            "id": 3
+          },
+          {
+            "text": "npm install vue-cli -g",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 7
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": " npm install vue-cli -g",
+        "answers": [
+          {
+            "text": ".passive",
+            "id": 1
+          },
+          {
+            "text": ".once",
+            "id": 2
+          },
+          {
+            "text": ".capture",
+            "id": 3
+          },
+          {
+            "text": ".esc",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 8
+      },
+      {
+        "correctAnswers": [
+          3
+        ],
+        "question": "How many types of directive available in vue.js?",
+        "answers": [
+          {
+            "text": "7",
+            "id": 1
+          },
+          {
+            "text": "6",
+            "id": 2
+          },
+          {
+            "text": "4",
+            "id": 3
+          },
+          {
+            "text": "2",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 9
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "v-show doest not support the <template> element?",
+        "answers": [
+          {
+            "text": "False",
+            "id": 1
+          },
+          {
+            "text": "True",
+            "id": 2
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 10
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "When a View Model is destroyed, all event listeners are automatically removed?",
+        "answers": [
+          {
+            "text": "True",
+            "id": 1
+          },
+          {
+            "text": "False",
+            "id": 2
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 11
+      },
+      {
+        "correctAnswers": [],
+        "question": "What is the correct way to create new instance in vue.js?",
+        "answers": [
+          {
+            "text": "var text = new Vue({ // options })",
+            "id": 1
+          },
+          {
+            "text": "var text = new vue(){ // options }",
+            "id": 2
+          },
+          {
+            "text": "var text = new text({ // options })",
+            "id": 3
+          },
+          {
+            "text": "var text = new object({ // options })",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 12
+      },
+      {
+        "correctAnswers": [
+          4
+        ],
+        "question": "How to represent filter in vue.js?",
+        "answers": [
+          {
+            "text": "::",
+            "id": 1
+          },
+          {
+            "text": "!",
+            "id": 2
+          },
+          {
+            "text": "||",
+            "id": 3
+          },
+          {
+            "text": "|",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 13
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "How to represent filter in vue.js?",
+        "answers": [
+          {
+            "text": "vFor",
+            "id": 1
+          },
+          {
+            "text": "v-for",
+            "id": 2
+          },
+          {
+            "text": "*ngFor",
+            "id": 3
+          },
+          {
+            "text": "&v-for",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 14
+      },
+      {
+        "correctAnswers": [
+          1
+        ],
+        "question": "How is the main Author of Vuejs?",
+        "answers": [
+          {
+            "text": "Evan You",
+            "id": 1
+          },
+          {
+            "text": "Tim",
+            "id": 2
+          },
+          {
+            "text": "Rasmus Lerdorf",
+            "id": 3
+          },
+          {
+            "text": "Brendan Eich",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 15
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "If we want to perform the click event only for one time.Which event modifier will be used?",
+        "answers": [
+          {
+            "text": "<a @:click.prevent-once=\"dotask\"></a>",
+            "id": 1
+          },
+          {
+            "text": "<a @:click.passive=\"dotask\"></a>",
+            "id": 2
+          },
+          {
+            "text": "<a @:click.stop=\"dotask\"></a>",
+            "id": 3
+          },
+          {
+            "text": "<a @:click.once=\"dotask\"></a>",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 16
+      },
+      {
+        "correctAnswers": [
+          2
+        ],
+        "question": "Which is used to Dynamically bind one or more attributes, or a component property to an expression?",
+        "answers": [
+          {
+            "text": "v-once directive,",
+            "id": 1
+          },
+          {
+            "text": "v-bind",
+            "id": 2
+          },
+          {
+            "text": "v-pre",
+            "id": 3
+          },
+          {
+            "text": "v-html",
+            "id": 4
+          }
+        ],
+        "selectedAnswer": null,
+        "id": 17
+      }
+    ],
+    "img": "vue"
   }
 }

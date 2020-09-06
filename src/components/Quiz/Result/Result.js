@@ -5,7 +5,16 @@ import {
   getSelectedQuizQuestions
 } from "../../../store/rootReducer";
 
+import downloadTxt from 'download-as-file'
+
+
 const Result = ({selectedQuizQuestions, quizIsDone}) => {
+
+  const a = selectedQuizQuestions.map((el, index) =>{
+    const correctAnswerIndex = el.correctAnswers[0];
+    const correctAnswer = el.answers[correctAnswerIndex - 1].text;
+    return `\n Question ${index + 1}: ${el.question} \n Answer: ${index + 1} ${correctAnswer} \n`
+  });
 
   const answers = [];
   selectedQuizQuestions.map(item => {
@@ -19,8 +28,13 @@ const Result = ({selectedQuizQuestions, quizIsDone}) => {
     <>
       {quizIsDone ?
         <div className={'result-modal'}>
+          <h2>Result</h2>
           <p>{Math.round(percent)}%</p>
-          <p>Правильных ответов: {correctAnswersCount.length}/{summaryQuestionCount}</p>
+          <p>Correct answers: {correctAnswersCount.length} / {summaryQuestionCount}</p>
+          <button onClick={() => downloadTxt({
+            data: a.join(' '),
+            filename: 'demo.txt'
+          })}>download correct answers</button>
         </div>
         : null}
     </>

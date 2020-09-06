@@ -40,6 +40,16 @@ module.exports = {
       },
       {test: /\.html$/, use: 'html-loader'},
       {
+        test: /\.(woff|eot|ttf)$/,
+        use: [{
+          loader: require.resolve('url-loader'),
+          options: {
+            limit: 25000,
+            name: 'fonts/[name].[ext]'
+          }
+        }]
+      },
+      {
         test: /\.less$/,
         use: [
           CssWebpackPlugin.loader,

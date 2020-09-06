@@ -12,7 +12,7 @@ function* fetchTestSaga() {
 }
 
 const quizSagas = [
-  //takeLatest(type.FETCH_TESTS_REQUEST, fetchTestSaga)
+
 ];
 
 export default quizSagas

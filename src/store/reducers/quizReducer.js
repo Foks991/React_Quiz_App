@@ -4,7 +4,11 @@ import test from '../../data/tests'
 export const quizInitialState = {
   allQuizzes: test,
 
-  selectedQuiz: {},
+  selectedQuiz: {
+    id: "",
+    quizTitle: "",
+    questions: [],
+  },
   activeQuestion: 0,
   answerLabels: ['A', 'B', 'C', 'D'],
   quizIsDone: false,
@@ -14,30 +18,14 @@ export default function (state = quizInitialState, action) {
   switch (action.type) {
 
     case quizActionTypes.SET_SELECTED_TEST: {
-      return {
-        ...state,
-        selectedQuiz: {
-          ...action.payload,
-        }
-      }
-    }
-
-    case quizActionTypes.SET_SELECTED_ANSWER: {
-
-      const { questionIndex, answerId } = action.payload;
-      const questions = [ ...state.selectedQuiz.questions ]
-      const newQuestionState = { ...questions[questionIndex] };
-
-      newQuestionState.selectedAnswer = answerId;
-      questions[questionIndex] = newQuestionState;
-
+      const {id, questions, quizTitle} = action.payload;
       return {
         ...state,
         selectedQuiz: {
           ...state.selectedQuiz,
-          questions: [
-            ...questions
-          ]
+          id,
+          quizTitle,
+          questions,
         }
       }
     }
@@ -90,20 +78,37 @@ export default function (state = quizInitialState, action) {
         }
     }
 
+    case quizActionTypes.SET_SELECTED_ANSWER: {
+      const {questionIndex, answerId} = action.payload;
+
+      const questions = [ ...state.selectedQuiz.questions ];
+      const newQuestionState = { ...questions[questionIndex] };
+      newQuestionState.selectedAnswer = answerId;
+      questions[questionIndex] = newQuestionState;
+
+      return {
+        ...state,
+        selectedQuiz: {
+          ...state.selectedQuiz,
+          questions: [
+            ...questions
+          ]
+        }
+      }
+    }
+
     default:
       return state
   }
 };
 
-export const getAllQuizzes = state => state.allQuizzes;
-
-export const getSelectedQuiz = state => state.selectedQuiz;
 export const getQuizTitle = state => state.selectedQuiz.quizTitle;
-export const getSelectedQuizQuestions = state => state.selectedQuiz.questions;
-
-export const getActiveQuestion = state => state.activeQuestion;
-export const getAnswerLabels = state => state.answerLabels;
+export const getAllQuizzes = state => state.allQuizzes;
 export const getQuizIsDone = state => state.quizIsDone;
+export const getSelectedQuiz = state => state.selectedQuiz;
+export const getAnswerLabels = state => state.answerLabels;
+export const getActiveQuestion = state => state.activeQuestion;
+export const getSelectedQuizQuestions = state => state.selectedQuiz.questions;
 
 
 

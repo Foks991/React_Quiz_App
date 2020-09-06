@@ -1,20 +1,16 @@
 import React from 'react'
 import { connect } from "react-redux";
-
-import Quizzes from "./Quizzes/Quizzes";
+import QuizList from "./QuizList/QuizList";
+import Header from "./Header/Header";
+import Description from "./Description/Description";
 
 const Main = () =>{
 
   return(
   <>
-    <div className={'allQuizzes'}>
-      <>
-        <div className={'userGreetings'}>
-          <p>Choose quiz for test your skills</p>
-        </div>
-        <Quizzes/>
-      </>
-    </div>
+    <Header/>
+    <Description/>
+    <QuizList/>
   </>
 )} ;
 

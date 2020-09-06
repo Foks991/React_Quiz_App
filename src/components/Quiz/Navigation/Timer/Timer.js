@@ -2,12 +2,11 @@ import React from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { connect } from 'react-redux';
 import { getQuizIsDone } from "../../../../store/rootReducer";
-import {quizActions} from "../../../../store/actions/quizActions";
 
 const Timer = ({quizIsDone}) => {
 
   const minuteSeconds = 60;
-  const hourSeconds = 1800;
+  const hourSeconds = 3600;
 
   const timerProps = {
     isPlaying: true,
