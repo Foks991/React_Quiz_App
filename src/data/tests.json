@@ -3926,6 +3926,7 @@
     ],
     "img": "git"
   },
+
   "vueQuiz": {
     "id": "vueQuiz",
     "quizTitle": "Vue Quiz",
@@ -4227,7 +4228,9 @@
         "id": 11
       },
       {
-        "correctAnswers": [],
+        "correctAnswers": [
+          1
+        ],
         "question": "What is the correct way to create new instance in vue.js?",
         "answers": [
           {
