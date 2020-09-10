@@ -7,7 +7,7 @@ import {camelToKebab} from "../../../helpers/textFormatter";
 import {setQuizToStorage} from "../../../sessionStorage/quiz";
 import {images} from "../../../helpers/imagesTransducer";
 
-const QuizList = ({allQuizzes, setSelectedTest}) => {
+const QuizList = ({ allQuizzes, setSelectedTest, setQuizIsDone }) => {
   const history = useHistory();
 
   return (
@@ -25,6 +25,7 @@ const QuizList = ({allQuizzes, setSelectedTest}) => {
                 onClick={(e) => {
                   const quizId = e.target.id;
                   setSelectedTest(allQuizzes[quizId]);
+                  setQuizIsDone(false);
                   setQuizToStorage(quizId);
                   history.push({pathname: `/${camelToKebab(quizId)}`});
                 }}
@@ -47,7 +48,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-  setSelectedTest: (id) => quizActions.setSelectedTest(id)
+  setSelectedTest: (id) => quizActions.setSelectedTest(id),
+  setQuizIsDone: (bool) => quizActions.setQuizIsDone(bool),
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(QuizList)

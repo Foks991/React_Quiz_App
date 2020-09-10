@@ -13,6 +13,7 @@ export default combineReducers({
 })
 
 //Quiz region
+export const getQuizId = state => fromQuiz.getQuizId(state.quiz);
 export const getQuizTitle = state => fromQuiz.getQuizTitle(state.quiz);
 export const getAllQuizzes = state => fromQuiz.getAllQuizzes(state.quiz);
 export const getQuizIsDone = state => fromQuiz.getQuizIsDone(state.quiz);

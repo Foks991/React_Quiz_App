@@ -703,7 +703,7 @@
             "id": 3
           },
           {
-            "text": "Cascading Style Sheets  ",
+            "text": "Cascading Style Sheets",
             "id": 4
           }
         ],
@@ -717,7 +717,7 @@
         "question": "What is the correct HTML for referring to an external style sheet?",
         "answers": [
           {
-            "text": "<style src=\"mystyle.css\">",
+            "text": "<style src='mystyle.css'>",
             "id": 1
           },
           {
@@ -725,7 +725,7 @@
             "id": 2
           },
           {
-            "text": "<link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">  ",
+            "text": "<link rel='stylesheet' type='text/css' href='mystyle.css'>  ",
             "id": 3
           }
         ],
@@ -961,11 +961,11 @@
             "id": 2
           },
           {
-            "text": "<p style=\"text-size:bold;\">",
+            "text": "<p style='text-size:bold;'>",
             "id": 3
           },
           {
-            "text": "<p style=\"font-size:bold;\">",
+            "text": "<p style='font-size:bold;'>",
             "id": 4
           }
         ],
@@ -1824,22 +1824,22 @@
         "correctAnswers": [
           3
         ],
-        "question": "What is the correct JavaScript syntax to change the content of the HTML element below? <p id=\"demo\">This is a demonstration.</p>",
+        "question": "What is the correct JavaScript syntax to change the content of the HTML element below? <p id='demo'>This is a demonstration.</p>",
         "answers": [
           {
-            "text": "document.getElementByName(\"p\").innerHTML = \"Hello World!\";",
+            "text": "document.getElementByName('p').innerHTML = 'Hello World!';",
             "id": 1
           },
           {
-            "text": "#demo.innerHTML = \"Hello World!\";",
+            "text": "#demo.innerHTML = 'Hello World!';",
             "id": 2
           },
           {
-            "text": "document.getElementById(\"demo\").innerHTML = \"Hello World!\";",
+            "text": "document.getElementById('demo').innerHTML = 'Hello World!';",
             "id": 3
           },
           {
-            "text": "document.getElement(\"p\").innerHTML = \"Hello World!\";",
+            "text": "document.getElement('p').innerHTML = 'Hello World!';",
             "id": 4
           }
         ],
@@ -1872,18 +1872,18 @@
         "correctAnswers": [
           1
         ],
-        "question": "What is the correct syntax for referring to an external script called \"xxx.js\"?",
+        "question": "What is the correct syntax for referring to an external script called 'xxx.js'?",
         "answers": [
           {
-            "text": "<script src=\"xxx.js\">",
+            "text": "<script src='xxx.js'>",
             "id": 1
           },
           {
-            "text": "<script href=\"xxx.js\">",
+            "text": "<script href='xxx.js'>",
             "id": 2
           },
           {
-            "text": "<script name=\"xxx.js\">",
+            "text": "<script name='xxx.js'>",
             "id": 3
           }
         ],
@@ -1912,22 +1912,22 @@
         "correctAnswers": [
           2
         ],
-        "question": "How do you write \"Hello World\" in an alert box?",
+        "question": "How do you write 'Hello World' in an alert box?",
         "answers": [
           {
-            "text": "msg(\"Hello World\");",
+            "text": "msg('Hello World');",
             "id": 1
           },
           {
-            "text": "alert(\"Hello World\");",
+            "text": "alert('Hello World');",
             "id": 2
           },
           {
-            "text": "msgBox(\"Hello World\");",
+            "text": "msgBox('Hello World');",
             "id": 3
           },
           {
-            "text": "alertBox(\"Hello World\");",
+            "text": "alertBox('Hello World');",
             "id": 4
           }
         ],
@@ -1960,7 +1960,7 @@
         "correctAnswers": [
           3
         ],
-        "question": "How do you call a function named \"myFunction\"?",
+        "question": "How do you call a function named 'myFunction'?",
         "answers": [
           {
             "text": "call function myFunction()",
@@ -2008,7 +2008,7 @@
         "correctAnswers": [
           1
         ],
-        "question": "How to write an IF statement for executing some code if \"i\" is NOT equal to 5?",
+        "question": "How to write an IF statement for executing some code if 'i' is NOT equal to 5?",
         "answers": [
           {
             "text": "if (i != 5)",
@@ -2129,19 +2129,19 @@
         "question": "What is the correct way to write a JavaScript array?",
         "answers": [
           {
-            "text": "const colors = 1 = (\"red\"), 2 = (\"green\"), 3 = (\"blue\")",
+            "text": "const colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')",
             "id": 1
           },
           {
-            "text": "const colors = (1:\"red\", 2:\"green\", 3:\"blue\")",
+            "text": "const colors = (1:'red', 2:'green', 3:'blue')",
             "id": 2
           },
           {
-            "text": "const colors = \"red\", \"green\", \"blue\"",
+            "text": "const colors = 'red', 'green', 'blue'",
             "id": 3
           },
           {
-            "text": "const colors = [\"red\", \"green\", \"blue\"]",
+            "text": "const colors = ['red', 'green', 'blue']",
             "id": 4
           }
         ],
@@ -2554,7 +2554,7 @@
         "question": "Which of the following is a valid union type variable?",
         "answers": [
           {
-            "text": "var emp:[number, string] = [1, \"Steve\"];",
+            "text": "var emp:[number, string] = [1, 'Steve'];",
             "id": 1
           },
           {
@@ -2562,7 +2562,7 @@
             "id": 2
           },
           {
-            "text": "var emp:string[] = [\"Bill\"]",
+            "text": "var emp:string[] = ['Bill']",
             "id": 3
           },
           {
@@ -2580,7 +2580,7 @@
         "question": "Which of the following is a valid tuple?",
         "answers": [
           {
-            "text": "var employee:[number, string] = [1, \"Bill\"]",
+            "text": "var employee:[number, string] = [1, 'Bill']",
             "id": 1
           },
           {
@@ -2588,7 +2588,7 @@
             "id": 2
           },
           {
-            "text": "var employee = [1, \"Bill\"];",
+            "text": "var employee = [1, 'Bill'];",
             "id": 3
           },
           {
@@ -3018,7 +3018,7 @@
         "correctAnswers": [
           3
         ],
-        "question": "With SQL, how do you select a column named \"FirstName\" from a table named \"Persons\"?",
+        "question": "With SQL, how do you select a column named 'FirstName' from a table named 'Persons'?",
         "answers": [
           {
             "text": "EXTRACT FirstName FROM Persons",
@@ -3040,7 +3040,7 @@
         "correctAnswers": [
           3
         ],
-        "question": "With SQL, how do you select all the columns from a table named \"Persons\"?",
+        "question": "With SQL, how do you select all the columns from a table named 'Persons'?",
         "answers": [
           {
             "text": "SELECT *.Persons",
@@ -3066,7 +3066,7 @@
         "correctAnswers": [
           1
         ],
-        "question": "With SQL, how do you select all the records from a table named \"Persons\" where the value of the column \"FirstName\" is \"Peter\"?",
+        "question": "With SQL, how do you select all the records from a table named 'Persons' where the value of the column 'FirstName' is 'Peter'?",
         "answers": [
           {
             "text": "SELECT * FROM Persons WHERE FirstName='Peter'  ",
@@ -3092,7 +3092,7 @@
         "correctAnswers": [
           3
         ],
-        "question": "With SQL, how do you select all the records from a table named \"Persons\" where the value of the column \"FirstName\" starts with an \"a\"?",
+        "question": "With SQL, how do you select all the records from a table named 'Persons' where the value of the column 'FirstName' starts with an 'a'?",
         "answers": [
           {
             "text": "SELECT * FROM Persons WHERE FirstName='%a%'",
@@ -3136,7 +3136,7 @@
         "correctAnswers": [
           3
         ],
-        "question": "With SQL, how do you select all the records from a table named \"Persons\" where the \"FirstName\" is \"Peter\" and the \"LastName\" is \"Jackson\"?",
+        "question": "With SQL, how do you select all the records from a table named 'Persons' where the 'FirstName' is 'Peter' and the 'LastName' is 'Jackson'?",
         "answers": [
           {
             "text": "SELECT * FROM Persons WHERE FirstName<>'Peter' AND LastName<>'Jackson'",
@@ -3158,7 +3158,7 @@
         "correctAnswers": [
           1
         ],
-        "question": "With SQL, how do you select all the records from a table named \"Persons\" where the \"LastName\" is alphabetically between (and including) \"Hansen\" and \"Pettersen\"?",
+        "question": "With SQL, how do you select all the records from a table named 'Persons' where the 'LastName' is alphabetically between (and including) 'Hansen' and 'Pettersen'?",
         "answers": [
           {
             "text": "SELECT * FROM Persons WHERE LastName BETWEEN 'Hansen' AND 'Pettersen'  ",
@@ -3228,7 +3228,7 @@
         "correctAnswers": [
           2
         ],
-        "question": "With SQL, how can you return all the records from a table named \"Persons\" sorted descending by \"FirstName\"?",
+        "question": "With SQL, how can you return all the records from a table named 'Persons' sorted descending by 'FirstName'?",
         "answers": [
           {
             "text": "SELECT * FROM Persons ORDER FirstName DESC",
@@ -3254,7 +3254,7 @@
         "correctAnswers": [
           2
         ],
-        "question": "With SQL, how can you insert a new record into the \"Persons\" table?",
+        "question": "With SQL, how can you insert a new record into the 'Persons' table?",
         "answers": [
           {
             "text": "INSERT VALUES ('Jimmy', 'Jackson') INTO Persons",
@@ -3276,7 +3276,7 @@
         "correctAnswers": [
           2
         ],
-        "question": "With SQL, how can you insert \"Olsen\" as the \"LastName\" in the \"Persons\" table?",
+        "question": "With SQL, how can you insert 'Olsen' as the 'LastName' in the 'Persons' table?",
         "answers": [
           {
             "text": "INSERT ('Olsen') INTO Persons (LastName)",
@@ -3298,7 +3298,7 @@
         "correctAnswers": [
           3
         ],
-        "question": "How can you change \"Hansen\" into \"Nilsen\" in the \"LastName\" column in the Persons table?",
+        "question": "How can you change 'Hansen' into 'Nilsen' in the 'LastName' column in the Persons table?",
         "answers": [
           {
             "text": "UPDATE Persons SET LastName='Hansen' INTO LastName='Nilsen'  ",
@@ -3324,7 +3324,7 @@
         "correctAnswers": [
           2
         ],
-        "question": "With SQL, how can you delete the records where the \"FirstName\" is \"Peter\" in the Persons Table?",
+        "question": "With SQL, how can you delete the records where the 'FirstName' is 'Peter' in the Persons Table?",
         "answers": [
           {
             "text": "DELETE FirstName='Peter' FROM Persons",
@@ -3346,7 +3346,7 @@
         "correctAnswers": [
           2
         ],
-        "question": "With SQL, how can you return the number of records in the \"Persons\" table?",
+        "question": "With SQL, how can you return the number of records in the 'Persons' table?",
         "answers": [
           {
             "text": "SELECT LEN(*) FROM Persons",
@@ -3664,7 +3664,7 @@
             "id": 3
           },
           {
-            "text": "git push -am \"Message\"",
+            "text": "git push -am 'Message'",
             "id": 4
           }
         ],
@@ -3678,19 +3678,19 @@
         "question": "How do you supply a commit message to a commit?",
         "answers": [
           {
-            "text": "git message \"I'm coding\"",
+            "text": "git message 'I'm coding'",
             "id": 1
           },
           {
-            "text": "git add \"I'm coding\"",
+            "text": "git add 'I'm coding'",
             "id": 2
           },
           {
-            "text": "git commit \"I'm coding\"",
+            "text": "git commit 'I'm coding'",
             "id": 3
           },
           {
-            "text": "git commit -m \"I'm coding\"",
+            "text": "git commit -m 'I'm coding'",
             "id": 4
           }
         ],
@@ -3704,19 +3704,19 @@
         "question": "What is the correct commit syntax for all changes with a message?",
         "answers": [
           {
-            "text": "git message -am \"I'm coding\"",
+            "text": "git message -am 'I'm coding'",
             "id": 1
           },
           {
-            "text": "git add -a \"I'm coding\"",
+            "text": "git add -a 'I'm coding'",
             "id": 2
           },
           {
-            "text": "git commit -a \"I'm coding\"",
+            "text": "git commit -a 'I'm coding'",
             "id": 3
           },
           {
-            "text": "git commit -am \"I'm coding\"",
+            "text": "git commit -am 'I'm coding'",
             "id": 4
           }
         ],
@@ -3926,7 +3926,6 @@
     ],
     "img": "git"
   },
-
   "vueQuiz": {
     "id": "vueQuiz",
     "quizTitle": "Vue Quiz",
@@ -4338,19 +4337,19 @@
         "question": "If we want to perform the click event only for one time.Which event modifier will be used?",
         "answers": [
           {
-            "text": "<a @:click.prevent-once=\"dotask\"></a>",
+            "text": "<a @:click.prevent-once='dotask'></a>",
             "id": 1
           },
           {
-            "text": "<a @:click.passive=\"dotask\"></a>",
+            "text": "<a @:click.passive='dotask'></a>",
             "id": 2
           },
           {
-            "text": "<a @:click.stop=\"dotask\"></a>",
+            "text": "<a @:click.stop='dotask'></a>",
             "id": 3
           },
           {
-            "text": "<a @:click.once=\"dotask\"></a>",
+            "text": "<a @:click.once='dotask'></a>",
             "id": 4
           }
         ],

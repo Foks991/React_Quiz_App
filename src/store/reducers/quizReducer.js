@@ -43,7 +43,7 @@ export default function (state = quizInitialState, action) {
         selectedQuiz: {
           ...state.selectedQuiz,
           questions: [
-            ...state.selectedQuiz.questions.map(el => Object.assign(el, el.selectedAnswer = 1))
+            ...state.selectedQuiz.questions.map(question => Object.assign({...question}, {selectedAnswer : 1}))
           ]
         }
       }
@@ -102,6 +102,7 @@ export default function (state = quizInitialState, action) {
   }
 };
 
+export const getQuizId = state => state.selectedQuiz.id;
 export const getQuizTitle = state => state.selectedQuiz.quizTitle;
 export const getAllQuizzes = state => state.allQuizzes;
 export const getQuizIsDone = state => state.quizIsDone;

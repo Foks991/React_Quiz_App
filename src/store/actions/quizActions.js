@@ -6,9 +6,13 @@ export const quizActionTypes = {
   PREVIOUS_QUESTION: 'PREVIOUS_QUESTION',
   CHOOSE_QUESTION: 'CHOOSE_QUESTION',
   SET_SELECTED_ANSWER: 'SET_SELECTED_ANSWER',
+  FETCH_USERS: 'FETCH_USERS',
 };
 
 export const quizActions = {
+  getUsers: () => ({
+    type: quizActionTypes.FETCH_USERS
+  }),
   setSelectedTest: test => ({
     type: quizActionTypes.SET_SELECTED_TEST, payload: test
   }),
