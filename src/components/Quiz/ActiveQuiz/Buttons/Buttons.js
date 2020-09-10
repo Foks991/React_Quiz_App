@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from "react-redux";
 import { quizActions } from "../../../../store/actions/quizActions";
 import { getSelectedQuizQuestions } from "../../../../store/rootReducer";
+import { StyledButton } from "../../../StyledComponents/CustomButton/CutstomButton";
 
 export const Buttons = ({setQuizIsDone, setAllAnswers, nextQuestion, previousQuestion,selectedQuizQuestions }) => {
 
@@ -12,18 +13,15 @@ export const Buttons = ({setQuizIsDone, setAllAnswers, nextQuestion, previousQue
 
   return (<div className={'buttons-block'}>
     {!checkAllAnswers(selectedQuizQuestions) ?
-      <div
-        style={{'backgroundColor': '#16BE00'}}
-        className={"button-item btn-1"}
-        onClick={() => setQuizIsDone(true)}>
+      <StyledButton lightgreen onClick={() => setQuizIsDone(true)}>
         Закончить тест
-      </div>
+      </StyledButton>
       :
       <>
-        <div className={"button-item btn-1"} onClick={previousQuestion}>Назад</div>
-        <div className={"button-item btn-1"} onClick={nextQuestion}>Вперёд</div>
+        <StyledButton onClick={previousQuestion}>Назад</StyledButton>
+        <StyledButton onClick={nextQuestion}>Вперёд</StyledButton>
       </>}
-    <div className={"button-item btn-1"} onClick={setAllAnswers}>Fast Finish</div>
+    <StyledButton onClick={setAllAnswers}>Fast Finish</StyledButton>
   </div>)
 
 };

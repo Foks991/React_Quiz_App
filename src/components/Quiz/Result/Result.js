@@ -1,14 +1,10 @@
 import React from 'react'
 import { connect } from "react-redux";
-import {
-  getQuizIsDone,
-  getSelectedQuizQuestions,
-  getQuizId
-} from "../../../store/rootReducer";
+import {getQuizIsDone, getSelectedQuizQuestions, getQuizId}  from "../../../store/rootReducer";
 import { createHtmlLayout } from "./htmlResultLayout";
-
 import downloadTxt from 'download-as-file'
 import { camelToKebab } from "../../../helpers/textFormatter";
+import { StyledButton } from "../../StyledComponents/CustomButton/CutstomButton";
 
 const Result = ({ selectedQuizQuestions, quizIsDone, quizId }) => {
 
@@ -37,12 +33,12 @@ const Result = ({ selectedQuizQuestions, quizIsDone, quizId }) => {
       {quizIsDone ?
         <div className={'result-modal'}>
           <h2>Result</h2>
-          <p>{Math.round(percent)}%</p>
-          <p>Correct answers: {correctAnswersCount.length} / {summaryQuestionCount}</p>
-          <button className={'button-item btn-1'} style={{backgroundColor: '#20c00a'}} onClick={downloadResultInTxt}>Download results in txt</button>
-          <button className={'button-item btn-1'} style={{marginTop: '20px', backgroundColor: '#20c00a'}} onClick={downloadResultInHtml}>Download results in html</button>
+          <p className={'result-modal_percent'}>{Math.round(percent)}%</p>
+          <p className={'result-modal_correct-answers'}>Correct answers: {correctAnswersCount.length} / {summaryQuestionCount}</p>
+          <StyledButton onClick={downloadResultInTxt}>Download in txt</StyledButton>
+          <StyledButton lightgreen onClick={downloadResultInHtml}>Download in html</StyledButton>
         </div>
-        : null}
+      : null}
     </>
   )
 };

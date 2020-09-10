@@ -8,8 +8,7 @@ import { quizActions } from "../../store/actions/quizActions";
 const Main = ({ getUsers }) =>{
 
   useEffect(() => {
-    getUsers()
-    console.log('use effect')
+    getUsers();
   },[]);
 
   return(
@@ -17,7 +16,6 @@ const Main = ({ getUsers }) =>{
     <Header/>
     <Description/>
     <QuizList/>
-
   </>
 )} ;
 
