@@ -1,44 +1,34 @@
 import React from 'react'
 import { connect } from "react-redux";
-import {getQuizIsDone, getSelectedQuizQuestions, getQuizId}  from "../../../store/rootReducer";
-import { createHtmlLayout } from "./htmlResultLayout";
+import { StyledButton } from "../../StyledComponents/CustomButton/CutstomButton";
 import downloadTxt from 'download-as-file'
 import { camelToKebab } from "../../../helpers/textFormatter";
-import { StyledButton } from "../../StyledComponents/CustomButton/CutstomButton";
+import { createHtmlLayout } from "./layouts/htmlResultLayout";
+import { createTxtLayout } from "./layouts/txtResultLayout";
+import { getQuizIsDone, getSelectedQuizQuestions, getQuizId }  from "../../../store/rootReducer";
 
 const Result = ({ selectedQuizQuestions, quizIsDone, quizId }) => {
 
-  const downloadResultInTxt = () => {
-    const formattedText = selectedQuizQuestions.map((el, index) =>{
-      const correctAnswerIndex = el.correctAnswers[0];
-      const correctAnswer = el.answers[correctAnswerIndex - 1].text;
-      return `\nQuestion ${index + 1}: ${el.question} \nAnswer   ${index + 1}: ${correctAnswer} \n`
-    });
+  const downloadResultInTxt = () => downloadTxt({data: createTxtLayout(selectedQuizQuestions), filename: `${camelToKebab(quizId)}-result.txt`});
+  const downloadResultInHtml = () => downloadTxt({data: createHtmlLayout(selectedQuizQuestions), filename: `${camelToKebab(quizId)}-result.html`});
 
-    downloadTxt({data: formattedText.join(' '), filename: `${camelToKebab(quizId)}-result.txt`})
-  };
+  const answers = selectedQuizQuestions.map(item => item.correctAnswers.find(element => element === item.selectedAnswer));
 
-  const downloadResultInHtml = () => downloadTxt({data: createHtmlLayout(selectedQuizQuestions), filename: `1.html`});
-
-  const answers = [];
-  selectedQuizQuestions.map(item => {
-    answers.push(item.correctAnswers.find(element => element === item.selectedAnswer));
-  });
-  const summaryQuestionCount = answers.length;
-  const correctAnswersCount = answers.filter(item => item !== undefined);
-  const percent = (correctAnswersCount.length * 100) / summaryQuestionCount;
+  const questionsCount = answers.length;
+  const correctAnswersCount = answers.filter(item => item);
+  const percent = (correctAnswersCount.length * 100) / questionsCount;
 
   return (
     <>
-      {quizIsDone ?
-        <div className={'result-modal'}>
-          <h2>Result</h2>
-          <p className={'result-modal_percent'}>{Math.round(percent)}%</p>
-          <p className={'result-modal_correct-answers'}>Correct answers: {correctAnswersCount.length} / {summaryQuestionCount}</p>
-          <StyledButton onClick={downloadResultInTxt}>Download in txt</StyledButton>
-          <StyledButton lightgreen onClick={downloadResultInHtml}>Download in html</StyledButton>
-        </div>
-      : null}
+      { quizIsDone &&
+      <div className={'result-modal'}>
+        <h2>Result</h2>
+        <p className={'result-modal_percent'}>{Math.round(percent)}%</p>
+        <p className={'result-modal_correct-answers'}>Correct
+          answers: {correctAnswersCount.length} / {questionsCount}</p>
+        <StyledButton onClick={downloadResultInTxt}>Download in txt</StyledButton>
+        <StyledButton lightgreen onClick={downloadResultInHtml}>Download in html</StyledButton>
+      </div> }
     </>
   )
 };
@@ -49,8 +39,4 @@ const mapStateToProps = (state) => ({
   selectedQuizQuestions: getSelectedQuizQuestions(state),
 });
 
-const mapDispatchToProps = {
-
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Result);
+export default connect(mapStateToProps, null)(Result);
